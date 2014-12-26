@@ -4,19 +4,6 @@
  *
  * @package Altertech_S
  */
-
-// Load main class for Git Updater
-if ( ! class_exists( 'GitHub_Updater' ) ) {
-	require 'inc/github-updater/class-github-updater.php';
-}
-// Instantiate class GitHub_Updater
-new GitHub_Updater;
-/**
- * Calls GitHub_Updater::init() in init hook so other remote upgrader apps like
- * InfiniteWP, ManageWP, MainWP, and iThemes Sync will load and use all
- * of GitHub_Updater's methods, especially renaming.
- */
-add_action( 'init', array( 'GitHub_Updater', 'init' ) );
 /**
  * Sets up theme defaults and registers support for various WordPress features.
  */
