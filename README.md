@@ -9,7 +9,7 @@ Altertech_S Wordpress Starter Theme
 <p>
 
 <p>Altertech_S Wordpress Starter Theme is based on Underscores http://underscores.me/, (C) 2012-2014 Automattic, Inc. and
-also on Google Web Starter Kit https://developers.google.com/web/starter-kit/, Google.</p> 
+also on Google Web Starter Kit https://developers.google.com/web/starter-kit/, Google Inc.</p> 
 
 <p>For the time being a starter Theme there are no major features, for now we are limited, as well as to include the necessary files to the Google Web Starter Kit, a few functions:</p>
 <ul>
@@ -21,7 +21,7 @@ also on Google Web Starter Kit https://developers.google.com/web/starter-kit/, G
 <li> Footer Sidebar with default content. </li>
 <li> Lightbox for images with link media and slide for tunnels. </li>
 <li> A simple dropdown for sub-menu. </li>
-<li> Support for WooCommerce. </li>
+<li> Supportp for WooCommerce. </li>
 <li> Custom Login Logo. </li>
 <li> Custom Home Blog Template. </li>
 <li> Update Theme via GitHub without plugin. </li>

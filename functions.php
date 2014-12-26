@@ -4,6 +4,19 @@
  *
  * @package Altertech_S
  */
+
+// Load main class for Git Updater
+if ( ! class_exists( 'GitHub_Updater' ) ) {
+	require 'inc/github-updater/class-github-updater.php';
+}
+// Instantiate class GitHub_Updater
+new GitHub_Updater;
+/**
+ * Calls GitHub_Updater::init() in init hook so other remote upgrader apps like
+ * InfiniteWP, ManageWP, MainWP, and iThemes Sync will load and use all
+ * of GitHub_Updater's methods, especially renaming.
+ */
+add_action( 'init', array( 'GitHub_Updater', 'init' ) );
 /**
  * Sets up theme defaults and registers support for various WordPress features.
  */
@@ -49,10 +62,11 @@ if ( function_exists( 'add_theme_support' ) ) {
 	) );
 	/*
 	 * Enable support for Post Formats.
-	 * See http://codex.wordpress.org/Post_Formats
+	 *
+	 * See: https://codex.wordpress.org/Post_Formats
 	 */
 	add_theme_support( 'post-formats', array(
-		'aside', 'image', 'video', 'quote', 'link',
+		'aside', 'image', 'video', 'quote', 'link', 'gallery', 'status', 'audio', 'chat'
 	) );
 	// Set up the WordPress core custom background feature.
 	add_theme_support( 'custom-background', apply_filters( 'altertech_s_custom_background_args', array(
@@ -144,11 +158,7 @@ function altertech_s_scripts() {
         
 	wp_enqueue_script( 'altertech_s-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true );
 
-        wp_enqueue_script( 'altertech_s-main-js', get_template_directory_uri() . '/scripts/main.min.js', array(), '20120206', true );
-
-	wp_enqueue_script( 'altertech_s-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
-	
-     
+        wp_enqueue_script( 'altertech_s-main-js', get_template_directory_uri() . '/scripts/main.min.js', array(), '20120206', true );	
         
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );

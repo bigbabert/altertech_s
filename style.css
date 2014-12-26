@@ -1,12 +1,12 @@
 /*
 Theme Name: Altertech_S
-Theme URI: http://www.blog.altertech.it/ggogle_s-wordpress-starter-theme-based-google-web-starter-kit/
+Theme URI: http://www.blog.altertech.it/altertech_s-wordpress-starter-theme-based-google-web-starter-kit/
 Author: Bigbabert
 Author URI: http://www.blog.altertech.it/author/alberto-cocchiara/
 Description: New Wordpress multipropose starter theme based on Google Web Starter Kit and Underscores & Bootstrap 3.0. Altertech_S is tested up to Wordpress 4.1 and Woocommerce 2.2.10.
-Version: 1.4.6
+Version: 1.5.1
 Template:         altertech_s
-Template Version: 1.4.6
+Template Version: 1.5.1
 GitHub Theme URI: https://github.com/bigbabert/altertech_s
 GitHub Branch:    master
 License: GNU General Public License v2 or later
@@ -26,7 +26,6 @@ Google Web Starter Kit and Bootstrap 3.0 mixed by Bigbabert
 /*--------------------------------------------------------------
 1.0 Media
 --------------------------------------------------------------*/
-
 .page-content img.wp-smiley,
 .entry-content img.wp-smiley,
 .comment-content img.wp-smiley {
@@ -240,7 +239,7 @@ font-weight: 600 !important;
 margin-top: -12px !important;
 font-size: 26px !important;
 }
-#nosidebar .sidebar, .page-template-page-full-php .sidebar {
+#nosidebar .sidebar, .page-template-page-full-php .sidebar, .page-template-page-landing-php #sidebar-2, .page-template-page-landing-php .sidebar  {
 display: none !important;
 }
 .sidebar {
@@ -325,8 +324,8 @@ color: white;
 h1.tag.editorial-header__title {
 width: 100%;
 }
-.cat-links i.icon.icon-introduction-to-media
-.editorial-header__subtitle a, .editorial-header__subtitle a:hover, .editorial-header__subtitle a:focus, .editorial-header__subtitle a:visited, .posted-on a:hover, .posted-on i.icon.icon-user-input, .posted-on i.icon.icon-user-input:hover, .posted-on i.icon.icon-user-input:focus, .posted-on i.icon.icon-user-input:visited, .posted-on i.icon.icon-user-input:active, .posted-on a:focus, .posted-on a:active, .posted-on a:visited, .cat-links i.icon.icon-introduction-to-media, .cat-links i.icon.icon-introduction-to-media:hover, .cat-links i.icon.icon-introduction-to-media:focus, .cat-links i.icon.icon-introduction-to-media:active, .cat-links i.icon.icon-introduction-to-media:visited, .tags-links i.icon.icon-hash, .tags-links i.icon.icon-hash:hover, .tags-links i.icon.icon-hash:focus, .tags-links i.icon.icon-hash:visited, .tags-links i.icon.icon-hash:active {
+.cat-links i.mdi-action-group-work
+.editorial-header__subtitle a, .editorial-header__subtitle a:hover, .editorial-header__subtitle a:focus, .editorial-header__subtitle a:visited, .posted-on a:hover, .posted-on i.mdi-notification-sync, .posted-on i.mdi-social-person, .posted-on i.mdi-social-person:hover,  .posted-on i.mdi-social-person:focus, .posted-on i.mdi-social-person:visited, .posted-on i.mdi-social-person:active, .posted-on i.mdi-notification-sync:hover, .posted-on i.mdi-notification-sync:focus, .posted-on i.mdi-notification-sync:visited, .posted-on i.mdi-notification-sync:active, .posted-on a:focus, .posted-on a:active, .posted-on a:visited, .cat-links i.mdi-action-group-work, .cat-links i.mdi-action-group-work:hover, .cat-links i.mdi-action-group-work:focus, .cat-links i.mdi-action-group-work:active, .cat-links i.mdi-action-group-work:visited, .tags-links i.mdi-action-loyalty, .tags-links i.mdi-action-loyalty:hover, .tags-links i.mdi-action-loyalty:focus, .tags-links i.mdi-action-loyalty:visited, .tags-links i.mdi-action-loyalty:active {
 color: #06e;
 }
 .tag::before {
@@ -348,19 +347,27 @@ padding: 12px !important
 .posted-on .icon-circle i {
 font-size: 16px !important;
 }
-.posted-on i.icon.icon-lessons, .posted-on i.icon.icon-user-input {
+.posted-on i.mdi-notification-event-available, .posted-on i.mdi-social-person, .posted-on i.mdi-notification-sync {
+position: relative;
+top: 5px;
 margin-left:7px;
 margin-right: 3px;
 }
-.posted-on i.icon.icon-menu {
-margin-top: 3px;
+.cat-links i.mdi-action-group-work, .tags-links i.mdi-action-loyalty {
+position: relative;
+top: 7px;
 margin-left:7px;
 margin-right: 3px;
 }
-.cat-links i.icon.icon-introduction-to-media, .tags-links i.icon.icon-hash {
-margin-top: 5px;
-margin-left:7px;
-margin-right: 3px;
+.edit-link i.mdi-content-create {
+position: relative;
+top: 5px;
+margin-left:3px;
+margin-right: 7px;
+}
+span.edit-link {
+margin-top: 35px;
+margin-bottom: 35px;
 }
  h3.sd-title {
  font-size: 22px !important;
@@ -369,8 +376,9 @@ margin-right: 3px;
  font: 400 32px/1 Genericons !important;
  }
 .nav-next a, .nav-previous a {
-display: block;
+display: inline-block;
 padding: 2.5%;
+padding-top: 5%;
 padding-bottom: 7%;
 background-color: #89c4e2;
 font-size: 18px;
@@ -395,21 +403,20 @@ color: white;
 .paging-navigation h1.screen-reader-text {
  display: none;
 }
-.paging-navigation div.nav-links {
-width: 100%;
-margin-top: 2%;
+div.nav-previous {
+display: block;
+float: left;
 }
-.paging-navigation div.nav-previous {
- margin-left: 4%;   
-}
-.paging-navigation div.nav-next {
- margin-right: 8%;
+div.nav-next {
+display: block;
+float: right;
+margin-left: 20px;
 }
 textarea#comment {
 max-width: 800px;
 width: 600px;
 }
-.site-info a, .site-info a:hover, .site-info a:visited, .site-info a:focus {
+.site-info a, .site-info a:hover, .site-info a:visited, .site-info a:focus,.button--primary:active, .button--primary:visited {
 color: white;
 }
 .site-info {
@@ -452,8 +459,117 @@ border-top: 1px solid #ccc;
 	display: block;
 	font-weight: 700;
 }
+/**
+ * 1.6 Navigation
+ * ----------------------------------------------------------------------------
+ */
+#mobile-menu, .navdrawer-container {
+display: none !important;
+}
+.main-navigation {
+clear: both;
+margin: 0 auto;
+max-width: 100%;
+min-height: 60px;
+position: relative;
+background-color: #3367D6;
+}
+
+ul.nav-menu,
+div.nav-menu > ul {
+margin: 0;
+padding: 0 40px 0 0;
+padding-left: 10%;
+}
+
+.nav-menu li {
+	display: inline-block;
+	position: relative;
+        padding-left: 0 !important;
+}
+
+.nav-menu li a {
+	color: #fff;
+	display: block;
+	font-size: 18px;
+	padding: 15px 20px;
+	text-decoration: none;
+}
+
+.nav-menu li:hover > a,
+.nav-menu li a:hover,
+.nav-menu li:focus > a,
+.nav-menu li a:focus {
+	background-color:rgba(255,255,255,.2);
+	color: #fff;
+}
+
+.nav-menu .sub-menu,
+.nav-menu .children {
+	background-color: #3367D6;
+	border: 2px solid #f7f5e7;
+	border-top: 0;
+	padding: 0;
+	position: absolute;
+	left: -2px;
+	z-index: 99999;
+	height: 1px;
+	width: 1px;
+	overflow: hidden;
+	clip: rect(1px, 1px, 1px, 1px);
+}
+
+.nav-menu .sub-menu ul,
+.nav-menu .children ul {
+	border-left: 0;
+	left: 100%;
+	top: 0;
+}
+
+ul.nav-menu ul a,
+.nav-menu ul ul a {
+	color: #fff;
+	margin: 0;
+	width: 200px;
+}
+
+ul.nav-menu ul a:hover,
+.nav-menu ul ul a:hover,
+ul.nav-menu ul a:focus,
+.nav-menu ul ul a:focus {
+	background-color:rgba(255,255,255,.2);
+}
+
+ul.nav-menu li:hover > ul,
+.nav-menu ul li:hover > ul,
+ul.nav-menu .focus > ul,
+.nav-menu .focus > ul {
+	clip: inherit;
+	overflow: inherit;
+	height: inherit;
+	width: inherit;
+}
+
+.nav-menu .current_page_item > a,
+.nav-menu .current_page_ancestor > a,
+.nav-menu .current-menu-item > a,
+.nav-menu .current-menu-ancestor > a {
+	color: #fff;
+}
+
+.menu-toggle {
+	display: none;
+}
+
+/* Navbar */
+.navbar {
+	background-color: #3367D6;
+	margin: 0 auto;
+	max-width: 1600px;
+	width: 100%;
+}
 /*--------------------------------------------------------------
-1.6 Comments Styling
+1.7 Comments Styling
 --------------------------------------------------------------*/
 .comment-reply-title small a:before,
 .comment-navigation .nav-next a:after,
@@ -878,9 +994,15 @@ border-top: 1px solid #ccc;
 	top: -3px;
 }
 /*---------------------------------------------
-1.7 Tablet Media Query
+1.8 Tablet Media Query
 --------------------------------------------------------------*/
 @media screen and (max-device-width: 966px){
+    #mobile-menu, .navdrawer-container {
+display: block !important;
+}
+.main-navigation {
+display: none !important;
+}
     .app-bar .logo {
     font-size: 28px !important;
     line-height: 30px !important;
@@ -893,7 +1015,7 @@ border-top: 1px solid #ccc;
     }
 }
 /*--------------------------------------------------------------
-1.8 Phone Media Query
+1.9 Phone Media Query
 --------------------------------------------------------------*/
 @media screen and (max-device-width: 480px){
     .app-bar-actions input#s.search {
@@ -912,6 +1034,14 @@ border-top: 1px solid #ccc;
     .logo legend {
     display: none;
     }
+    	.widget_calendar td,
+	.widget_calendar th {
+		line-height: 2.9286;
+	}
+
+	.widget_calendar caption {
+		margin: 0 0 1.5em;
+	}
     .sidebar {
         width: 100%;
         padding-left: 5%;

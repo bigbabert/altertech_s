@@ -12,47 +12,37 @@
  */
 
 get_header(); ?>
+<?php // Display blog posts on any page @ http://m0n.co/l
+		$temp = $wp_query; $wp_query= null;
+		$wp_query = new WP_Query(); $wp_query->query('showposts=5' . '&paged='.$paged);
+		while ($wp_query->have_posts()) : $wp_query->the_post(); ?>
 
+		<?php get_template_part( 'content-blog', get_post_format() ); ?>
 
-<?php 
-        /* The loop: the_post retrieves the content
-         * of the new Page you created to list the posts,
-         * e.g., an intro describing the posts shown listed on this Page..
-         */
-     
-
-        $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
-
-        $args = array(
-            // Change these category SLUGS to suit your use.
-          'category_name' => '', 
-          'paged' => $paged
-        );
-
-        $list_of_posts = new WP_Query( $args );
-        ?>
-        <?php if ( $list_of_posts->have_posts() ) : ?>
-			<?php /* The loop */ ?>
-			<?php while ( $list_of_posts->have_posts() ) : $list_of_posts->the_post(); ?>
-
-				<?php
-					/* Include the Post-Format-specific template for the content.
-					 * If you want to override this in a child theme, then include a file
-					 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
-					 */
-					get_template_part( 'content', get_post_format() );
-				?>
-
-			<?php endwhile; ?>
+		<?php endwhile; ?>
+		<?php if ($paged > 1) { ?>
 <div class="container nav-container">
-			<?php altertech_s_paging_nav(); ?>
+	<nav class="navigation paging-navigation" role="navigation">
+		<h1 class="screen-reader-text"><?php _e( 'Posts navigation', 'altertech_s' ); ?></h1>
+		<div class="nav-links">
+			<div class="nav-previous"><?php next_posts_link( __( '<span class="meta-nav">&larr;</span> Older posts', 'altertech_s' ) ); ?></div>
+			<div class="nav-next"><?php previous_posts_link( __( 'Newer posts <span class="meta-nav">&rarr;</span>', 'altertech_s' ) ); ?></div>
+</div><!-- .nav-links -->
+	</nav><!-- .navigation -->
 </div>
-		<?php else : ?>
+		<?php } else { ?>
+<div class="container nav-container">
+	<nav class="navigation paging-navigation" role="navigation">
+		<h1 class="screen-reader-text"><?php _e( 'Posts navigation', 'altertech_s' ); ?></h1>
+		<div class="nav-links">
+			<div class="nav-previous"><?php next_posts_link( __( '<span class="meta-nav">&larr;</span> Older posts', 'altertech_s' ) ); ?></div>
+		</div><!-- .nav-links -->
+	</nav><!-- .navigation -->
+</div>
 
-			<?php get_template_part( 'content', 'none' ); ?>
+		<?php } ?>
 
-		<?php endif; ?>
-<!-- #primary -->
+		<?php wp_reset_postdata(); ?>
 
 <?php get_sidebar(); ?>
 <?php get_footer(); ?>

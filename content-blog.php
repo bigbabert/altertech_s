@@ -36,4 +36,5 @@
 <br><a class="button--primary pull-right" href="<?php the_permalink(); ?>"> Read the full post</a>
                                 </div>
                     </div>
+  
 </article>
