@@ -4,11 +4,7 @@ Theme URI: http://www.blog.altertech.it/altertech_s-wordpress-starter-theme-base
 Author: Bigbabert
 Author URI: http://www.blog.altertech.it/author/alberto-cocchiara/
 Description: New Wordpress multipropose starter theme based on Google Web Starter Kit and Underscores & Bootstrap 3.0. Altertech_S is tested up to Wordpress 4.1 and Woocommerce 2.2.10.
-Version: 1.5.1
-Template:         altertech_s
-Template Version: 1.5.1
-GitHub Theme URI: https://github.com/bigbabert/altertech_s
-GitHub Branch:    master
+Version: 1.5.3
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: altertech_s
@@ -21,7 +17,7 @@ Altertech_S is based on Underscores http://underscores.me/, (C) 2012-2014 Automa
 also on Google Web Starter Kit https://developers.google.com/web/starter-kit/, Google Inc. 
 
 Resetting and rebuilding styles have been helped along thanks to the fine work of
-Google Web Starter Kit and Bootstrap 3.0 mixed by Bigbabert
+Google Web Starter Kit https://developers.google.com/web/starter-kit/, Google Inc and Fancybox Jquery, http://fancybox.net, mixed by Bigbabert
 */
 /*--------------------------------------------------------------
 1.0 Media
