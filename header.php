@@ -22,14 +22,15 @@
 <title><?php wp_title( '|', true, 'right' ); ?></title>
 <!-- Add to homescreen for Chrome on Android -->
     <meta name="mobile-web-app-capable" content="yes">
-    <link rel="icon" sizes="192x192" href="<?php if ( get_theme_mod( 'altertech_s_favicon' ) ) : ?><?php echo esc_url( get_theme_mod( 'altertech_s_favicon' ) ); ?>"><?php else : ?><?php echo get_template_directory_uri(); ?>/images/touch/chrome-touch-icon-192x192.png"><?php endif; ?>
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <meta name="apple-mobile-web-app-title" content="<?php wp_title(); ?>">
-    <link rel="apple-touch-icon-precomposed" href="<?php if ( get_theme_mod( 'altertech_s_favicon' ) ) : ?><?php echo esc_url( get_theme_mod( 'altertech_s_favicon' ) ); ?>"><?php else : ?><?php echo get_template_directory_uri(); ?>/apple-touch-icon-precomposed.png"><?php endif; ?>
-
     <!-- Tile icon for Win8 (144x144 + tile color) -->
-    <meta name="msapplication-TileImage" content="<?php if ( get_theme_mod( 'altertech_s_favicon' ) ) : ?><?php echo esc_url( get_theme_mod( 'altertech_s_favicon' ) ); ?>"><?php else : ?><?php echo get_template_directory_uri(); ?>/images/touch/ms-touch-icon-144x144-precomposed.png"><?php endif; ?>
+       <?php if ( get_theme_mod( 'altertech_s_favicon' ) ) : ?>
+    <link rel="icon" sizes="192x192" href="<?php echo esc_url( get_theme_mod( 'altertech_s_favicon' ) );?>">
+    <link rel="apple-touch-icon-precomposed" href="<?php echo esc_url( get_theme_mod( 'altertech_s_favicon' ) );?>">
+    <meta name="msapplication-TileImage" content="<?php echo esc_url( get_theme_mod( 'altertech_s_favicon' ) );?>">
+<?php endif; ?>
     <meta name="msapplication-TileColor" content="#3372DF">
 <link rel="profile" href="http://gmpg.org/xfn/11">
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">

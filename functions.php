@@ -95,7 +95,7 @@ add_action( 'widgets_init', 'altertech_s_widgets_init' );
 /**
  * Add "first" and "last" CSS classes to dynamic sidebar widgets. Also adds numeric index class for each widget (widget-1, widget-2, etc.)
  */
-function widget_first_last_class($params) {
+function altertech_s_widget_first_last_class($params) {
 
 	global $my_widget_num; // Global a counter array
 	$this_id = $params[0]['id']; // Get the id for the current sidebar we're processing
@@ -128,7 +128,7 @@ function widget_first_last_class($params) {
 	return $params;
 
 }
-add_filter('dynamic_sidebar_params','widget_first_last_class');
+add_filter('dynamic_sidebar_params','altertech_s_widget_first_last_class');
 // Add custom editor support
    function altertech_s_add_editor_styles() {
     add_editor_style( 'custom-editor-style.css' );
@@ -179,21 +179,21 @@ require get_template_directory() . '/inc/customizer.php';
 require get_template_directory() . '/inc/jetpack.php';
 
 // Enqueue Scripts/Styles for our Lightbox
-function alter_add_lightbox() {
+function altertech_s_add_lightbox() {
     wp_enqueue_script( 'fancybox', get_template_directory_uri() . '/scripts/jquery.fancybox.pack.js', array( 'jquery' ), false, true );
     wp_enqueue_script( 'lightbox', get_template_directory_uri() . '/scripts/lightbox.js', array( 'fancybox' ), false, true );
     wp_enqueue_style( 'lightbox-style', get_template_directory_uri() . '/styles/jquery.fancybox.css' );
 }
-add_action( 'wp_enqueue_scripts', 'alter_add_lightbox' );
+add_action( 'wp_enqueue_scripts', 'altertech_s_add_lightbox' );
 
 // The Excerpt length
-function new_excerpt_length($length) {
+function altertech_s_excerpt_length($length) {
 	return 80;
 }
-add_filter('excerpt_length', 'new_excerpt_length');
+add_filter('excerpt_length', 'altertech_s_excerpt_length');
 
 // Replaces the excerpt "more" text by a link
-function new_excerpt_more($more) {
+function altertech_s_excerpt_more($more) {
        global $post;
         if ($pos=strpos($post->post_content, '<!--more-->')){
 	return '<br><a class="button--primary pull-right" href="'. get_permalink($post->ID) . '"> Read the full post</a>';
@@ -202,40 +202,40 @@ function new_excerpt_more($more) {
 	return '<br><a style="display:none;" class="button--primary pull-right" href="'. get_permalink($post->ID) . '"> Read the full post</a>';
 }
         }
-add_filter('excerpt_more', 'new_excerpt_more');
+add_filter('excerpt_more', 'altertech_s_excerpt_more');
 
 /**
  * Meta box for Pages and Posts header
  */
-function prfx_custom_meta() {
-    add_meta_box( 'prfx_meta', __( 'Header Line', 'altertech_s' ), 'prfx_meta_callback', 'post', 'normal', 'high' );
-	add_meta_box( 'prfx_meta', __( 'Header Line', 'altertech_s' ), 'prfx_meta_callback', 'page', 'normal', 'high' );
+function altertech_s_custom_meta() {
+    add_meta_box( 'altertech_s_meta', __( 'Header Line', 'altertech_s' ), 'altertech_s_meta_callback', 'post', 'normal', 'high' );
+	add_meta_box( 'altertech_s_meta', __( 'Header Line', 'altertech_s' ), 'altertech_s_meta_callback', 'page', 'normal', 'high' );
 }
-add_action( 'add_meta_boxes', 'prfx_custom_meta' );
+add_action( 'add_meta_boxes', 'altertech_s_custom_meta' );
 
 /**
  * Outputs the content of the meta box
  */
-function prfx_meta_callback( $post ) {
-    wp_nonce_field( basename( __FILE__ ), 'prfx_nonce' );
-    $prfx_stored_meta = get_post_meta( $post->ID );
+function altertech_s_meta_callback( $post ) {
+    wp_nonce_field( basename( __FILE__ ), 'altertech_s_nonce' );
+    $altertech_s_stored_meta = get_post_meta( $post->ID );
     ?>
  
 <p>
     <label for="meta-textarea" class="prfx-row-title"><?php _e( 'Header Line after featured image in Posts and Pages', 'altertech_s' )?></label>
-    <textarea style="width: 100%;min-height: 180px;" name="meta-textarea" id="meta-textarea"><?php if ( isset ( $prfx_stored_meta['meta-textarea'] ) ) echo $prfx_stored_meta['meta-textarea'][0]; ?></textarea>
+    <textarea style="width: 100%;min-height: 180px;" name="meta-textarea" id="meta-textarea"><?php if ( isset ( $altertech_s_stored_meta['meta-textarea'] ) ) echo $altertech_s_stored_meta['meta-textarea'][0]; ?></textarea>
 </p>
     <?php
 }
 /**
  * Saves the custom meta input
  */
-function prfx_meta_save( $post_id ) {
+function altertech_s_meta_save( $post_id ) {
  
     // Checks save status
     $is_autosave = wp_is_post_autosave( $post_id );
     $is_revision = wp_is_post_revision( $post_id );
-    $is_valid_nonce = ( isset( $_POST[ 'prfx_nonce' ] ) && wp_verify_nonce( $_POST[ 'prfx_nonce' ], basename( __FILE__ ) ) ) ? 'true' : 'false';
+    $is_valid_nonce = ( isset( $_POST[ 'altertech_s_nonce' ] ) && wp_verify_nonce( $_POST[ 'altertech_s_nonce' ], basename( __FILE__ ) ) ) ? 'true' : 'false';
  
     // Exits script depending on save status
     if ( $is_autosave || $is_revision || !$is_valid_nonce ) {
@@ -248,11 +248,11 @@ if( isset( $_POST[ 'meta-textarea' ] ) ) {
 }
  
 }
-add_action( 'save_post', 'prfx_meta_save' );
+add_action( 'save_post', 'altertech_s_meta_save' );
 /**
  * Customizing Login Page
  */
-function alter_login_logo() { ?>
+function altertech_s_login_logo() { ?>
     <style type="text/css">
          body.login div#login h1 a {
 background-image: url( '<?php echo get_stylesheet_directory_uri(); ?>/images/login-logo.png' );
@@ -267,7 +267,7 @@ border-radius: 50%;
         }
     </style>
 <?php }
-add_action( 'login_enqueue_scripts', 'alter_login_logo' );
+add_action( 'login_enqueue_scripts', 'altertech_s_login_logo' );
 function loginpage_custom_link() {
 	return esc_url( home_url( '/' ) );
 }

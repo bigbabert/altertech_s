@@ -9,8 +9,7 @@ Altertech_S Wordpress Starter Theme
 <p>
 
 <h2>Resources:</h2>
-<p>Altertech_S Wordpress Starter Theme is based on Underscores http://underscores.me/, (C) 2012-2014 Automattic, Inc. and
-also on Google Web Starter Kit https://developers.google.com/web/starter-kit/, Google Inc.</p> 
+<p>Altertech_S Wordpress Starter Theme is based on Google Web Starter Kit https://developers.google.com/web/starter-kit/, Google Inc.</p> 
 
 <p>For the time being a starter Theme there are no major features, for now we are limited, as well as to include the necessary files to the Google Web Starter Kit, a few functions:</p>
 <ul>
@@ -38,11 +37,13 @@ also on Google Web Starter Kit https://developers.google.com/web/starter-kit/, G
 <p>Tags: Full width, starter template, Google Web, Right Sidebar, Lightbox, Woocommerce support</p>
 
 
-<p>This theme, like WordPress, is licensed under the GPL.
+<p>This theme, like WordPress, is licensed under the GPLV2, http://www.gnu.org/licenses/gpl-2.0.html
 Use it to make something cool, have fun, and share what you've learned with others.</p>
 
-<p>Altertech_S is based on Underscores http://underscores.me/, (C) 2012-2014 Automattic, Inc. and
-also on Google Web Starter Kit https://developers.google.com/web/starter-kit/, Google and Fancybox Jquery, http://fancybox.net.</p> 
+<p>Altertech_S is based on Google Web Starter Kit https://developers.google.com/web/starter-kit/, Google and Fancybox Jquery, http://fancybox.net.</p> 
+
+<p>Fancybox License: www.fancyapps.com/fancybox/#license<p>
+<p>Google Web Starter Kit Licensed under the Apache License, Version 2.0 https://github.com/google/web-starter-kit/blob/master/LICENSE</p>
 
 <p>Resetting and rebuilding styles have been helped along thanks to the fine work of
-Google Web Starter Kit & Underscores</p>
+Google Web Starter Kit & FancyBox</p>
