@@ -23,8 +23,6 @@ function altertech_s_setup() {
 
 	// Add default posts and comments RSS feed links to head.
 	add_theme_support( 'automatic-feed-links' );
-	// Add support for title tag.
-        add_theme_support( 'title-tag' );
 	// Add support for Woocommerce.
         add_theme_support( 'woocommerce' );
 	/*
@@ -65,6 +63,11 @@ if ( function_exists( 'add_theme_support' ) ) {
 endif; 
         // altertech_s_setup
         add_action( 'after_setup_theme', 'altertech_s_setup' );
+	// Add support for title tag.
+        function altertech_s_slug_setup() {
+   add_theme_support( 'title-tag' );
+}
+add_action( 'after_setup_theme', 'altertech_s_slug_setup' );
 /**
  * This theme have two sidebars one on the Right and one at the top of the footer.
  * Register widget area.
@@ -142,7 +145,7 @@ function altertech_s_scripts() {
         
         wp_enqueue_style( 'main-style', get_template_directory_uri() . '/genericons/genericons.css' );
 
-        wp_enqueue_style( 'genericons-style', get_template_directory_uri() . '/styles/main.css' );
+        wp_enqueue_style( 'genericons-style', get_template_directory_uri() . '/styles/main.min.css' );
         
 	wp_enqueue_script( 'altertech_s-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true );
 
@@ -249,30 +252,3 @@ if( isset( $_POST[ 'meta-textarea' ] ) ) {
  
 }
 add_action( 'save_post', 'altertech_s_meta_save' );
-/**
- * Customizing Login Page
- */
-function altertech_s_login_logo() { ?>
-    <style type="text/css">
-         body.login div#login h1 a {
-background-image: url( '<?php echo get_stylesheet_directory_uri(); ?>/images/login-logo.png' );
-margin: 0;
-width: 160px;
-height: 160px;
-background-size: 100%;
-background-position: center;
-margin-left: 28%;
-margin-bottom: 5%;
-border-radius: 50%;
-        }
-    </style>
-<?php }
-add_action( 'login_enqueue_scripts', 'altertech_s_login_logo' );
-function loginpage_custom_link() {
-	return esc_url( home_url( '/' ) );
-}
-function change_title_on_logo() { 
-	return "Go to My Altertech_S Site";
-}
-add_filter('login_headertitle', 'change_title_on_logo');
-add_filter('login_headerurl','loginpage_custom_link');

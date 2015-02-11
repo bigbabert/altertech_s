@@ -40,10 +40,11 @@ Altertech_S Wordpress Starter Theme
 <p>This theme, like WordPress, is licensed under the GPLV2, http://www.gnu.org/licenses/gpl-2.0.html
 Use it to make something cool, have fun, and share what you've learned with others.</p>
 
-<p>Altertech_S is based on Google Web Starter Kit https://developers.google.com/web/starter-kit/, Google and Fancybox Jquery, http://fancybox.net.</p> 
+<p>Altertech_S is based on Google Web Starter Kit https://developers.google.com/web/starter-kit/, Google and Fancybox Jquery, http://fancybox.net, and use Genericons by Automattic.</p> 
 
-<p>Fancybox License: www.fancyapps.com/fancybox/#license<p>
 <p>Google Web Starter Kit Licensed under the Apache License, Version 2.0 https://github.com/google/web-starter-kit/blob/master/LICENSE</p>
+<p>Fancybox License: www.fancyapps.com/fancybox/#license<p>
+<p>Genericons License: https://github.com/Automattic/Genericons/blob/master/LICENSE.txt<p>
 
 <p>Resetting and rebuilding styles have been helped along thanks to the fine work of
-Google Web Starter Kit & FancyBox</p>
+Google Web Starter Kit & FancyBox & Automattic</p>
