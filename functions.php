@@ -33,7 +33,7 @@ function altertech_s_setup() {
 if ( function_exists( 'add_theme_support' ) ) { 
     add_theme_support( 'post-thumbnails' );
     set_post_thumbnail_size( 280, 210, true ); // Normal post thumbnails
-    add_image_size( 'screen-shot', 720, 540 ); // Full size screen
+    add_image_size( 'altertech_s-screen-shot', 720, 540 ); // Full size screen
     }
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
@@ -78,7 +78,7 @@ function altertech_s_widgets_init() {
 	register_sidebar( array(
 		'name'          => __( 'Right Sidebar', 'altertech_s' ),
 		'id'            => 'sidebar-1',
-		'description'   => 'This is a simple rght Sidebar, if i empty the site will be full width.',
+		'description'   => 'Simple right sidebar.',
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</aside>',
 		'before_title'  => '<h1 class="widget-title">',
@@ -87,7 +87,7 @@ function altertech_s_widgets_init() {
 	register_sidebar( array(
 		'name'          => __( 'Footer Sidebar', 'altertech_s' ),
 		'id'            => 'sidebar-2',
-		'description'   => 'This is multi layout Footer Sidebar if empty appears the default content.',
+		'description'   => 'The widgets in this area will be visible at the end of the page.',
 		'before_widget' => '<li id="%1$s" class="g-medium--half g-wide--1 theme--multi-device-layouts  widget %2$s">',
 		'after_widget'  => '</li>',
 		'before_title'  => '<a href="#ignore-click" class="themed"><span class="icon-circle--large themed--background"><i class="icon icon-multi-device-layouts"></i></span><h3 class="large text-divider">',
@@ -143,9 +143,9 @@ add_action( 'after_setup_theme', 'altertech_s_add_editor_styles' );
 function altertech_s_scripts() {
 	wp_enqueue_style( 'altertech_s-style', get_stylesheet_uri() );
         
-        wp_enqueue_style( 'main-style', get_template_directory_uri() . '/genericons/genericons.css' );
+        wp_enqueue_style( 'altertech_s-altertech_s-main-style', get_template_directory_uri() . '/styles/main.min.css' );
 
-        wp_enqueue_style( 'genericons-style', get_template_directory_uri() . '/styles/main.min.css' );
+        wp_enqueue_style( 'altertech_s-genericons-style', get_template_directory_uri() . '/genericons/genericons.css' );
         
 	wp_enqueue_script( 'altertech_s-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true );
 
@@ -183,9 +183,9 @@ require get_template_directory() . '/inc/jetpack.php';
 
 // Enqueue Scripts/Styles for our Lightbox
 function altertech_s_add_lightbox() {
-    wp_enqueue_script( 'fancybox', get_template_directory_uri() . '/scripts/jquery.fancybox.pack.js', array( 'jquery' ), false, true );
-    wp_enqueue_script( 'lightbox', get_template_directory_uri() . '/scripts/lightbox.js', array( 'fancybox' ), false, true );
-    wp_enqueue_style( 'lightbox-style', get_template_directory_uri() . '/styles/jquery.fancybox.css' );
+    wp_enqueue_script( 'altertech_s-fancybox', get_template_directory_uri() . '/scripts/jquery.fancybox.pack.js', array( 'jquery' ), false, true );
+    wp_enqueue_script( 'altertech_s-lightbox', get_template_directory_uri() . '/scripts/lightbox.js', array( 'fancybox' ), false, true );
+    wp_enqueue_style( 'altertech_s-lightbox-style', get_template_directory_uri() . '/styles/jquery.fancybox.css' );
 }
 add_action( 'wp_enqueue_scripts', 'altertech_s_add_lightbox' );
 
@@ -206,49 +206,3 @@ function altertech_s_excerpt_more($more) {
 }
         }
 add_filter('excerpt_more', 'altertech_s_excerpt_more');
-
-/**
- * Meta box for Pages and Posts header
- */
-function altertech_s_custom_meta() {
-    add_meta_box( 'altertech_s_meta', __( 'Header Line', 'altertech_s' ), 'altertech_s_meta_callback', 'post', 'normal', 'high' );
-	add_meta_box( 'altertech_s_meta', __( 'Header Line', 'altertech_s' ), 'altertech_s_meta_callback', 'page', 'normal', 'high' );
-}
-add_action( 'add_meta_boxes', 'altertech_s_custom_meta' );
-
-/**
- * Outputs the content of the meta box
- */
-function altertech_s_meta_callback( $post ) {
-    wp_nonce_field( basename( __FILE__ ), 'altertech_s_nonce' );
-    $altertech_s_stored_meta = get_post_meta( $post->ID );
-    ?>
- 
-<p>
-    <label for="meta-textarea" class="prfx-row-title"><?php _e( 'Header Line after featured image in Posts and Pages', 'altertech_s' )?></label>
-    <textarea style="width: 100%;min-height: 180px;" name="meta-textarea" id="meta-textarea"><?php if ( isset ( $altertech_s_stored_meta['meta-textarea'] ) ) echo $altertech_s_stored_meta['meta-textarea'][0]; ?></textarea>
-</p>
-    <?php
-}
-/**
- * Saves the custom meta input
- */
-function altertech_s_meta_save( $post_id ) {
- 
-    // Checks save status
-    $is_autosave = wp_is_post_autosave( $post_id );
-    $is_revision = wp_is_post_revision( $post_id );
-    $is_valid_nonce = ( isset( $_POST[ 'altertech_s_nonce' ] ) && wp_verify_nonce( $_POST[ 'altertech_s_nonce' ], basename( __FILE__ ) ) ) ? 'true' : 'false';
- 
-    // Exits script depending on save status
-    if ( $is_autosave || $is_revision || !$is_valid_nonce ) {
-        return;
-    }
- 
-// Checks for input and saves if needed
-if( isset( $_POST[ 'meta-textarea' ] ) ) {
-    update_post_meta( $post_id, 'meta-textarea', $_POST[ 'meta-textarea' ] );
-}
- 
-}
-add_action( 'save_post', 'altertech_s_meta_save' );

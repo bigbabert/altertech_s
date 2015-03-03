@@ -14,9 +14,6 @@
 			<?php altertech_s_posted_on(); ?>
 		</h1><!-- .entry-meta -->
 	</header><!-- .entry-header -->
-<?php if ( get_post_meta( get_the_ID(), 'meta-textarea', true ) ) : ?>
-<p class="editorial-header__excerpt "><ol class="list-anchor list-large"><?php the_meta('meta-textarea'); ?></ol></p>
-<?php endif; ?>
     <?php if ( has_post_thumbnail() ) : ?>
                         <p class="featured-image-borded"><?php the_post_thumbnail( 'large' ); ?></p>
 <?php endif; ?>

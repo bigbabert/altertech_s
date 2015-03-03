@@ -42,9 +42,9 @@
 
 <body <?php body_class(); ?>>
     <header class="app-bar promote-layer">
-        <a style="display: none;" class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'twentyfifteen' ); ?></a>
+        <a style="display: none;" class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'altertech_s' ); ?></a>
       <div class="app-bar-container">
-        <button class="menu"><img src="<?php echo get_template_directory_uri(); ?>/images/hamburger.svg" alt="Menu">
+        <button class="menu"><img src="<?php echo get_template_directory_uri(); ?>/images/hamburger.svg" alt="<?php _e( 'Menu', 'altertech_s'); ?>">
 		</button>
           <a class="logo" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
     <?php if ( get_theme_mod( 'altertech_s_logo' ) ) : ?>

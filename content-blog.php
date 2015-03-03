@@ -33,7 +33,7 @@
                  <p styleclass="editorial-header__excerpt "><?php the_excerpt(); ?></p>
                   <!-- .entry-content -->
  <?php endif; ?>
-<br><a class="button--primary pull-right" href="<?php the_permalink(); ?>"> Read the full post</a>
+<br><a class="button--primary pull-right" href="<?php the_permalink(); ?>"> <?php _e( 'Read the full post', 'altertech_s' ); ?></a>
                                 </div>
                     </div>
   
