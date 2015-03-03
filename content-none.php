@@ -35,7 +35,7 @@
 	<div class="highlight-module   highlight-module--remember g-medium--full g-wide--full ">
 		<div class="highlight-module__container icon-question g-medium--full g-wide--full">
 			<div class="highlight-module__content  g--half g--centered ">
-				<p class="highlight-module__title large"><?php _e( 'It seems impossible to find what you are looking for. Perhaps searching can help.', 'altertech_s' ); ?></p>
+				<p class="highlight-module__title large"><?php _e( 'It seems impossible to find what you are looking for. Perhaps searching can help.', 'altertech_s' ); ?></p>
 				<p class="highlight-module__text"><?php get_search_form(); ?></p>
 			</div>
 		</div>
