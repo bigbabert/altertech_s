@@ -275,21 +275,21 @@ msgstr ""
 msgid "Search Results for: %s"
 msgstr ""
 #. Theme Name of the plugin/theme
-msgid "_s"
+msgid "altertech_s"
 msgstr ""
 
 #. Theme URI of the plugin/theme
-msgid "http://underscores.me/"
+msgid "http://altertech.it"
 msgstr ""
 
 #. Description of the plugin/theme
-msgid "Hi. I'm a starter theme called <code>_s</code>, or <em>underscores</em>, if you like. I'm a theme meant for hacking so don't use me as a <em>Parent Theme</em>. Instead try turning me into the next, most awesome, WordPress theme out there. That's what I'm here for."
+msgid "New Wordpress multipropose starter theme based on Google Web Starter Kit. Altertech_S is tested up to Wordpress 4.1 and Woocommerce 2.2.10."
 msgstr ""
 
 #. Author of the plugin/theme
-msgid "Automattic"
+msgid "Bigbabert"
 msgstr ""
 
 #. Author URI of the plugin/theme
-msgid "http://automattic.com/"
+msgid "http://blog.altertech.it/"
 msgstr ""

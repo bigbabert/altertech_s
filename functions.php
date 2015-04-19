@@ -33,7 +33,7 @@ function altertech_s_setup() {
 if ( function_exists( 'add_theme_support' ) ) { 
     add_theme_support( 'post-thumbnails' );
     set_post_thumbnail_size( 280, 210, true ); // Normal post thumbnails
-    add_image_size( 'altertech_s-screen-shot', 720, 540 ); // Full size screen
+    add_image_size( 'altertech_s-full', 720, 540 ); // Full size screen
     }
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
@@ -78,7 +78,7 @@ function altertech_s_widgets_init() {
 	register_sidebar( array(
 		'name'          => __( 'Right Sidebar', 'altertech_s' ),
 		'id'            => 'sidebar-1',
-		'description'   => 'Simple right sidebar.',
+		'description'   => 'This is a simple rght Sidebar',
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</aside>',
 		'before_title'  => '<h1 class="widget-title">',
@@ -87,7 +87,7 @@ function altertech_s_widgets_init() {
 	register_sidebar( array(
 		'name'          => __( 'Footer Sidebar', 'altertech_s' ),
 		'id'            => 'sidebar-2',
-		'description'   => 'The widgets in this area will be visible at the end of the page.',
+		'description'   => 'This is multi-layout Footer Sidebar',
 		'before_widget' => '<li id="%1$s" class="g-medium--half g-wide--1 theme--multi-device-layouts  widget %2$s">',
 		'after_widget'  => '</li>',
 		'before_title'  => '<a href="#ignore-click" class="themed"><span class="icon-circle--large themed--background"><i class="icon icon-multi-device-layouts"></i></span><h3 class="large text-divider">',
@@ -143,9 +143,9 @@ add_action( 'after_setup_theme', 'altertech_s_add_editor_styles' );
 function altertech_s_scripts() {
 	wp_enqueue_style( 'altertech_s-style', get_stylesheet_uri() );
         
-        wp_enqueue_style( 'altertech_s-altertech_s-main-style', get_template_directory_uri() . '/styles/main.min.css' );
+        wp_enqueue_style( 'altertech_s-main-style', get_template_directory_uri() . '/genericons/genericons.css' );
 
-        wp_enqueue_style( 'altertech_s-genericons-style', get_template_directory_uri() . '/genericons/genericons.css' );
+        wp_enqueue_style( 'altertech_s-genericons-style', get_template_directory_uri() . '/styles/main.min.css' );
         
 	wp_enqueue_script( 'altertech_s-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true );
 
@@ -195,14 +195,4 @@ function altertech_s_excerpt_length($length) {
 }
 add_filter('excerpt_length', 'altertech_s_excerpt_length');
 
-// Replaces the excerpt "more" text by a link
-function altertech_s_excerpt_more($more) {
-       global $post;
-        if ($pos=strpos($post->post_content, '<!--more-->')){
-	return '<br><a class="button--primary pull-right" href="'. get_permalink($post->ID) . '"> Read the full post</a>';
-} 
- else {
-	return '<br><a style="display:none;" class="button--primary pull-right" href="'. get_permalink($post->ID) . '"> Read the full post</a>';
-}
-        }
-add_filter('excerpt_more', 'altertech_s_excerpt_more');
+

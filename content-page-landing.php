@@ -6,11 +6,7 @@
  */
 ?>
     <?php if ( has_post_thumbnail() ) : ?>
-                        <p class="featured-image-borded"><?php the_post_thumbnail( 'large' ); ?></p>
+                        <p class="featured-image-borded"><?php the_post_thumbnail( 'altertech_s-full' ); ?></p>
 <?php endif; ?>
-                   <?php the_content(); ?>
-                        
-		<?php edit_post_link( __( 'Edit', 'altertech_s' ), '<span class="edit-link">', '</span>' ); ?>
-
-        </div>
-        <main>
+                   <?php the_content(); ?>                       
+		<?php edit_post_link( __( 'Edit', 'altertech_s' ), '<p><span class="button--secondary">', '</span></p>' ); ?>

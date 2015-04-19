@@ -28,15 +28,11 @@ get_header(); ?>
 				?>
 
 			<?php endwhile; ?>
-<div class="container nav-container">
-			<?php altertech_s_paging_nav(); ?>
-</div>
+      <?php altertech_s_paging_nav(); ?>
 		<?php else : ?>
 
 			<?php get_template_part( 'content', 'none' ); ?>
 
 		<?php endif; ?>
 <!-- #primary -->
-
-<?php get_sidebar(); ?>
 <?php get_footer(); ?>

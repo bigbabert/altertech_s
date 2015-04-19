@@ -32,8 +32,5 @@
         c = t(".app-bar"),
         a = t(".menu"),
         i = t("main");
-    i.addEventListener("click", e), a.addEventListener("click", n), s.addEventListener("click", function(n) {
-        ("A" === n.target.nodeName || "LI" === n.target.nodeName) && e()
-    })
 }();
 

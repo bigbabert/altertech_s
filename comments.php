@@ -17,11 +17,8 @@ if ( post_password_required() ) {
 	return;
 }
 ?>
-
-<div id="comments" class="comments-area">
-
-	<?php // You can start editing here -- including this comment! ?>
-
+<div class="clearfix"></div>
+<div class="g-medium--full g-wide--full gs-mrg-top"><div class="container">
 	<?php if ( have_comments() ) : ?>
 		<h2 class="comments-title">
 			<?php
@@ -29,21 +26,16 @@ if ( post_password_required() ) {
 					number_format_i18n( get_comments_number() ), '<span>' . get_the_title() . '</span>' );
 			?>
 		</h2>
-
 		<?php altertech_s_comment_nav(); ?>
-
-		<ol class="comment-list">
+		<ul class="featured-list">
 			<?php
 				wp_list_comments( array(
-					'style'       => 'ol',
+					'style'       => 'ul',
 					'short_ping'  => true,
 					'avatar_size' => 56,
 				) );
 			?>
-		</ol><!-- .comment-list -->
-
-		<?php altertech_s_comment_nav(); ?>
-
+		</ul><!-- .comment-list -->
 	<?php endif; // have_comments() ?>
 
 	<?php
@@ -52,7 +44,7 @@ if ( post_password_required() ) {
 	?>
 		<p class="no-comments"><?php _e( 'Comments are closed.', 'altertech_s' ); ?></p>
 	<?php endif; ?>
-
 	<?php comment_form(); ?>
-
+        </div>
 </div><!-- #comments -->
+<div class="clearfix"></div>

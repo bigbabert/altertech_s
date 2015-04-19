@@ -20,21 +20,24 @@
 	<?php the_content(); ?>
 	</blockquote></div></section><!-- .entry-content -->
 <?php elseif ( has_post_format( 'video' ) || has_post_format( 'audio' )) : ?>
-                  <p styleclass="editorial-header__excerpt "><?php the_content(); ?></p>
+                  <p class="editorial-header__excerpt "><?php the_content(); ?></p>
                   <!-- .entry-content -->
 <?php elseif ( has_post_thumbnail() ) : ?>
-	<a href="<?php the_permalink(); ?>"><p class="image-borded"><?php the_post_thumbnail( 'large' ); ?></p></a>
-                  <p styleclass="editorial-header__excerpt "><?php the_excerpt(); ?></p>
+	<a href="<?php the_permalink(); ?>"><p class="image-borded"><?php the_post_thumbnail( 'altertech_s-full' ); ?></p></a>
+                  <p class="editorial-header__excerpt "><?php the_excerpt(); ?></p>
                   <!-- .entry-content -->
                   <?php elseif ( post_password_required() ) : ?>
                  <?php  get_the_password_form(); ?>
                   <!-- .entry-content -->
                <?php else : ?>
-                 <p styleclass="editorial-header__excerpt "><?php the_excerpt(); ?></p>
+                 <p class="editorial-header__excerpt "><?php the_excerpt(); ?></p>
                   <!-- .entry-content -->
  <?php endif; ?>
-<br><a class="button--primary pull-right" href="<?php the_permalink(); ?>"> <?php _e( 'Read the full post', 'altertech_s' ); ?></a>
+<?php if ( post_password_required() ) : ?>
+<br><a class="button--primary pull-right" href="<?php the_permalink(); ?>"> Type password to Read</a>
+<?php else : ?>
+<br><a class="button--primary pull-right" href="<?php the_permalink(); ?>"> Read the full post</a>
+<?php endif; ?>
                                 </div>
                     </div>
-  
 </article>
