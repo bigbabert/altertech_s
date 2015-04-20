@@ -7,6 +7,11 @@
  * @package Altertech_S
  */
 ?>
+    <div class="container">
+	<?php if ( function_exists('yoast_breadcrumb') ) {
+  yoast_breadcrumb('<p id="breadcrumbs">','</p>');
+} ?>
+    </div>
 		<?php if ( is_home() && current_user_can( 'publish_posts' ) ) : ?>
 <div <?php if ( ! is_active_sidebar( 'sidebar-1' ) ) : ?>class="g-medium--full g-wide--full tophome"<?php else : ?>class="g-medium--full g-wide--full"<?php endif; ?>>
 	<div class="highlight-module   highlight-module--remember g-medium--full g-wide--full ">
@@ -24,7 +29,7 @@
 	<div class="highlight-module   highlight-module--remember g-medium--full g-wide--full ">
 		<div class="highlight-module__container icon-question g-medium--full g-wide--full">
 			<div class="highlight-module__content  g--half g--centered ">
-				<p class="highlight-module__title small-text"><?php _e( '<p class="highlight-module__title large">Sorry, but nothing matched your search terms. Please try again with some different keywords.</p>', 'altertech_s' ); ?></p>
+				<p class="highlight-module__title small-text"><p class="highlight-module__title large"><?php _e( 'Sorry, but nothing matched your search terms. Please try again with some different keywords.', 'altertech_s' ); ?></p></p>
 				<p class="highlight-module__text"><?php get_search_form(); ?></p>
 			</div>
 		</div>

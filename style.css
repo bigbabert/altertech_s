@@ -4,7 +4,7 @@ Theme URI: http://www.blog.altertech.it/altertech_s-wordpress-starter-theme-base
 Author: Bigbabert
 Author URI: http://www.blog.altertech.it/author/alberto-cocchiara/
 Description: New Wordpress multipropose starter theme based on Google Web Starter Kit. Altertech_S is tested up to Wordpress 4.1 and Woocommerce 2.2.10.
-Version: 1.5.8
+Version: 1.5.9
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: altertech_s
@@ -167,6 +167,24 @@ border: 2px solid #ccc
 /*--------------------------------------------------------------
 1.4 Clearings
 --------------------------------------------------------------*/
+.gs_fix {
+background-color: #4285f4;
+display: block;
+max-width: 100% !important;
+}
+body.admin-bar #wpadminbar{
+display: block !important;
+}
+body.admin-bar .app-bar {
+    position: relative !important;
+    top: 28px !important;
+}
+body.admin-bar nav.navdrawer-container.promote-layer.open.opened {
+margin-top: 28px !important;
+}
+.author .editorial-header .container p, .author span.byline {
+display: none;
+}
 #submit {
     display: inline-block;
     padding: 12px 32px;
@@ -311,11 +329,84 @@ div.sd-content.gs_widget ul {
 /*--------------------------------------------------------------
 1.6 Navigation
 --------------------------------------------------------------*/
-nav ul li ul {
-    display: none !important;
+.main-navigation {
+	clear: both;
+	margin: 0 auto;
+	max-width: 1080px;
+	min-height: 45px;
+	position: relative;
 }
-nav ul li:hover ul {
-    display: inline-block !important;
+
+ul.nav-menu,
+div.nav-menu > ul {
+	margin: 0;
+	padding: 0 40px 0 0;
+        margin-left: 14%;
+	width: 100%;
+}
+
+.nav-menu li {
+	display: inline-block;
+	position: relative;
+}
+
+.nav-menu li a {
+	display: block;
+	line-height: 1.5;
+	padding: 15px;
+}
+
+.nav-menu li:hover > a,
+.nav-menu li a:hover,
+.nav-menu li:focus > a,
+.nav-menu li a:focus {
+	background-color: #4285f4;
+	color: #fff;
+}
+
+.nav-menu .sub-menu,
+.nav-menu .children {
+	background-color: #3367d6;
+	border: 1px solid #ccc;
+	border-top: 0;
+	padding: 0;
+	position: absolute;
+	left: -2px;
+	z-index: 99999;
+	height: 1px;
+	width: 1px;
+	overflow: hidden;
+	clip: rect(1px, 1px, 1px, 1px);
+}
+
+.nav-menu .sub-menu ul,
+.nav-menu .children ul {
+	border-left: 0;
+	left: 100%;
+	top: 0;
+}
+
+ul.nav-menu ul a,
+.nav-menu ul ul a {
+	color: #fff;
+        width: 200px;
+}
+
+ul.nav-menu ul a:hover,
+.nav-menu ul ul a:hover,
+ul.nav-menu ul a:focus,
+.nav-menu ul ul a:focus {
+        background-color: #4285f4;
+}
+
+ul.nav-menu li:hover > ul,
+.nav-menu ul li:hover > ul,
+ul.nav-menu .focus > ul,
+.nav-menu .focus > ul {
+	clip: inherit;
+	overflow: inherit;
+	height: inherit;
+	width: inherit;
 }
 .menu-item-has-children a::after {
     content: "\e002";
@@ -333,8 +424,29 @@ nav ul li:hover ul {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
-.sub-menu a::after {
-    content: "";
+.sub-menu .menu-item-has-children a::after {
+    content: "\e003" !important;
+    font-family: "icons";
+    display: inline-block;
+    vertical-align: bottom;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 1em;
+    margin-left: 10px;
+    speak: none;
+    text-decoration: inherit;
+    text-transform: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.sub-menu a::after, .nav-menu li::before, .sub-menu .sub-menu a::after {
+    content: "" !important;
+}
+/* Navbar */
+.navbar {
+        max-width: 1600px;
+	width: 100%;
 }
 /*--------------------------------------------------------------
 1.7 Comments Styling

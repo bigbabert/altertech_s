@@ -18,7 +18,7 @@ function altertech_s_customize_register( $wp_customize ) {
     $wp_customize->add_section( 'altertech_s_favicon_section' , array(
 	    'title'       => __( 'Favicon', 'altertech_s' ),
 	    'priority'    => 29,
-	    'description' => 'Upload your Favicon.</br><span style="color:red;">The should be .jpg and .png but the size must be 192x192 px.</span>',
+	    'description' => __( 'Upload your Favicon'.'</br><span style="color:red;">'.'The should be .jpg and .png but the size must be 192x192 px'.'</span>', 'altertech_s' ),
 	) );
 	$wp_customize->add_setting( 'altertech_s_favicon', array(
 		'sanitize_callback' => 'esc_url_raw',
@@ -32,7 +32,7 @@ function altertech_s_customize_register( $wp_customize ) {
     $wp_customize->add_section( 'altertech_s_logo_section' , array(
 	    'title'       => __( 'Logo', 'altertech_s' ),
 	    'priority'    => 30,
-	    'description' => 'Upload a logo to replace the default site name and description in the header',
+	    'description' => __( 'Upload a logo to replace the default site name and description in the header', 'altertech_s' )
 	) );
 	$wp_customize->add_setting( 'altertech_s_logo', array(
 		'sanitize_callback' => 'esc_url_raw',

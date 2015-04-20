@@ -4,8 +4,9 @@
  */
 ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+    
 	<?php if ( function_exists('yoast_breadcrumb') ) {
-  yoast_breadcrumb('<p id="breadcrumbs">','</p>');
+  yoast_breadcrumb('<div class="container"><p id="breadcrumbs">','</p></div>');
 } ?>
     		<div class="editorial-header">
 			<div  class="container" >

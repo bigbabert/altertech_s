@@ -35,7 +35,7 @@ function altertech_s_body_classes( $classes ) {
 }
 add_filter( 'body_class', 'altertech_s_body_classes' );
 
-if ( ! function_exists( '_wp_render_title_tag' ) ) :
+if ( ! function_exists( 'altertech_s_wp_title' ) ) :
 	/**
 	 * Filters wp_title to print a neat <title> tag based on what is being viewed.
 	 *

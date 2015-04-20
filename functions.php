@@ -78,7 +78,7 @@ function altertech_s_widgets_init() {
 	register_sidebar( array(
 		'name'          => __( 'Right Sidebar', 'altertech_s' ),
 		'id'            => 'sidebar-1',
-		'description'   => 'This is a simple rght Sidebar',
+		'description'   => __( 'This is a simple rght Sidebar', 'altertech_s' ),
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</aside>',
 		'before_title'  => '<h1 class="widget-title">',
@@ -87,7 +87,7 @@ function altertech_s_widgets_init() {
 	register_sidebar( array(
 		'name'          => __( 'Footer Sidebar', 'altertech_s' ),
 		'id'            => 'sidebar-2',
-		'description'   => 'This is multi-layout Footer Sidebar',
+		'description'   => __( 'This is multi-layout Footer Sidebar', 'altertech_s' ),
 		'before_widget' => '<li id="%1$s" class="g-medium--half g-wide--1 theme--multi-device-layouts  widget %2$s">',
 		'after_widget'  => '</li>',
 		'before_title'  => '<a href="#ignore-click" class="themed"><span class="icon-circle--large themed--background"><i class="icon icon-multi-device-layouts"></i></span><h3 class="large text-divider">',

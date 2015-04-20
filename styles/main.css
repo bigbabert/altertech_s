@@ -19,6 +19,9 @@ fieldset {
     margin: 0;
     padding: 0
 }
+.highlight-module--remember a.post-edit-link, .highlight-module--remember a.post-edit-link:visited, .highlight-module--remember a.post-edit-link:focused, .highlight-module--remember a.post-edit-link:focus {
+    color: #3372df !important;
+}
 textarea {
     resize: vertical
 }
@@ -3016,7 +3019,7 @@ ol {
     bottom: 0;
     width: 250px;
     height: 100%;
-    background-color: #3367D6;
+    background-color: #4285f4;
     color: #fefefe;
     -webkit-transform: translate(-250px, 0);
     transform: translate(-250px, 0);
@@ -3032,37 +3035,21 @@ main {
     -webkit-transition: -webkit-transform .3s ease-out;
     transition: transform .3s ease-out
 }
-.navdrawer-container h4,
-.navdrawer-container ul li a {
-    height: 60px;
-    padding: 17px 20px;
-    line-height: 1.4
-}
 .navdrawer-container h4 {
     background-color: #fff;
-    color: #3367D6
-}
-.navdrawer-container ul {
-    padding: 0;
-    margin: 0;
-    list-style-type: none
+    color: #3367D6;
+      padding: 17px;
 }
 .navdrawer-container ul li a {
-    display: block;
     text-decoration: none;
     color: #fff;
     -webkit-transition: background-color .2s ease-out;
     transition: background-color .2s ease-out;
-    white-space: nowrap
 }
 .navdrawer-container ul li {
     border-bottom-style: solid;
     border-width: 1px;
     border-color: #fff;
-    padding: 0
-}
-.navdrawer-container ul li::before {
-    content: none
 }
 .navdrawer-container ul li a:hover {
     background-color: rgba(255, 255, 255, .2)
@@ -3119,26 +3106,10 @@ main {
     .navdrawer-container {
         position: relative;
         width: 100%;
-        height: auto;
-        margin-top: 0;
-        -webkit-transform: translate(0, 0);
-        transform: translate(0, 0);
-        -webkit-transition: none;
-        transition: none;
-        overflow-y: auto
+        overflow-y: inherit;
     }
     .navdrawer-container h4 {
         display: none
-    }
-    .navdrawer-container ul {
-        display: -webkit-flex;
-        display: -ms-flexbox;
-        display: flex;
-        max-width: 864px;
-        margin: 0 auto;
-        -webkit-flex-direction: row;
-        -ms-flex-direction: row;
-        flex-direction: row
     }
     .navdrawer-container ul li {
         border: none
