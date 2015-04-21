@@ -171,7 +171,7 @@ border: 2px solid #ccc
             body.admin-bar #wpadminbar {
             position: absolute;    
             }
-            body.admin-bar header.app-bar.promote-layer {
+            body.admin-bar header.app-bar.promote-layer, body.admin-bar .navdrawer-container h4 {
               margin-top: 46px;
             }
 }
@@ -457,7 +457,7 @@ ul.nav-menu .focus > ul,
 }
 /* Navbar */
 .navbar {
-        max-width: 1600px;
+        max-width: 100%;
 	width: 100%;
 }
 /*--------------------------------------------------------------
@@ -511,12 +511,6 @@ ul.children {
 1.8 Tablet Media Query
 --------------------------------------------------------------*/
 @media screen and (max-device-width: 966px){
-    #mobile-menu, .navdrawer-container {
-display: block !important;
-}
-.main-navigation {
-display: none !important;
-}
     .app-bar .logo {
     font-size: 28px !important;
     line-height: 30px !important;

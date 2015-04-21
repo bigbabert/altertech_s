@@ -34,6 +34,7 @@
 </head>
 <a style="display: none;" class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'altertech_s' ); ?></a>
 <body <?php body_class(); ?>>
+         <div class="clearfix"></div>
  <div class="gs_fix">
         <header class="app-bar promote-layer">
             <div class="app-bar-container">
@@ -42,6 +43,7 @@
                 </button>
             </div>
         </header>
+         <div class="clearfix"></div>
 <div style="background-color: #4285f4;" class="g-medium--full g-wide--full gs-top">
     <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
         <?php if ( get_theme_mod( 'altertech_s_logo' ) ) : ?>
@@ -51,12 +53,12 @@
     <?php endif; ?>
     </a>
         </div>
-     <div id="navbar" class="navbar">
-				<nav id="site-navigation" class="navigation main-navigation navdrawer-container" role="navigation">
+			<div id="navbar" class="navbar">
+				<nav id="site-navigation" class="navigation main-navigation navdrawer-container promote-layer">
             <h4><?php _e( 'Navigation', 'altertech_s' ); ?></h4>
-					<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_class' => 'nav-menu' ) ); ?>
-				</nav><!-- #site-navigation -->
-			</div><!-- #navbar -->
+<?php wp_nav_menu( array( 'theme_location' => 'primary','menu_class' => 'nav-menu')); ?>
+        </nav>
+         </div>
     </div>
     <div class="clearfix"></div>
     <?php if (is_page_template('page-full.php') ):?>
