@@ -56,7 +56,7 @@ if ( ! function_exists( 'altertech_s_wp_title' ) ) :
 		// Add the blog description for the home/front page.
 		$site_description = get_bloginfo( 'description', 'display' );
 		if ( $site_description && ( is_home() || is_front_page() ) ) {
-			$title .= " $sep $site_description";
+			$title ;
 		}
 
 		// Add a page number if necessary:
