@@ -17,12 +17,11 @@ Altertech_S Wordpress Starter Theme
 <li> Various sizes for the thumbnails. </li>
 <li> A graphic grid for Media Galleries. </li>
 <li> A custom field to insert text before the image featured in posts and pages. </li>
-<li> Right Sidebar. </li>
+<li> Simple Right Sidebar. </li>
 <li> Footer Sidebar with default content. </li>
 <li> Lightbox for images with link media and slide for tunnels. </li>
 <li> A simple dropdown for sub-menu. </li>
-<li> Supportp for WooCommerce. </li>
-<li> Custom Login Logo. </li>
+<li> Support for WooCommerce. </li>
 <li> Custom Favicon. </li>
 <li> Custom Home Blog Template. </li>
 <li> Support for title tag Wordpress 4.1. </li>
@@ -30,7 +29,7 @@ Altertech_S Wordpress Starter Theme
 
 <p>Try our new starter this theme completely responsive and SEO friendly, Altertech_S made based on Google Web Starter Kit (Node.js, Sass, Gulp).</p> <p>We would be extremely grateful for feedback, reports or suggestions.</p>
 
-<p>Altertech_S Theme is tested up to Wordpress 4.1 and Woocommerce 2.2.10.</p>
+<p>Altertech_S Theme is tested up to Wordpress 4.2 and Woocommerce 2.3.8.</p>
 
 <img src="https://raw.githubusercontent.com/bigbabert/altertech_s/master/screenshot.png">
 
