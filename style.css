@@ -4,7 +4,7 @@ Theme URI: http://www.blog.altertech.it/altertech_s-wordpress-starter-theme-base
 Author: Bigbabert
 Author URI: http://www.blog.altertech.it/author/alberto-cocchiara/
 Description: New Wordpress multipropose starter theme based on Google Web Starter Kit. Altertech_S is tested up to Wordpress 4.1 and Woocommerce 2.2.10.
-Version: 1.6.1
+Version: 1.6.2
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: altertech_s
@@ -197,7 +197,23 @@ max-width: 100% !important;
 .author .editorial-header .container p, .author span.byline {
 display: none;
 }
-#submit {
+ul.products li::before, nav.woocommerce-pagination ul.page-numbers li::before, ul.payment_methods li::before {
+content: "";
+}
+input#coupon_code.input-text {
+line-height: 1.8;
+margin: 12px 8px 0 0;
+}
+tr.cart_item {
+    font-family: "Roboto Condensed", Helvetica, sans-serif;
+    font-size: 24px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.woocommerce-cart table.cart img {
+width: 110px;
+}
+#submit, a.checkout-button.button.alt.wc-forward, .woocommerce .cart .button, .woocommerce .cart input.button,.woocommerce #payment #place_order, .woocommerce-page #payment #place_order {
     display: inline-block;
     padding: 12px 32px;
     margin-bottom: 13px;
@@ -210,17 +226,15 @@ display: none;
     outline: 0;
     -webkit-transition: none;
     transition: none;
+    background: #4285f4;
+    color: #fff;
+    border: 1px solid #1266f1;
 }
 #submit:hover {
     background: #4d4d4d;
     color: #fff;
     border: 1px solid #4d4d4d;
     text-decoration: none;
-}
-#submit {
-    background: #4285f4;
-    color: #fff;
-    border: 1px solid #1266f1;
 }
 button#searchsubmit {
     background: transparent;
