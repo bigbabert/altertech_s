@@ -1,6 +1,6 @@
 <?php
 /**
- * The template used for displaying page content in page.php
+ * The template used for displaying page content in woocommerce shop page.
  *
  * @package Altertech_S
  */
@@ -11,13 +11,12 @@
   yoast_breadcrumb('<p id="breadcrumbs">','</p>');
 } ?>
     </div>
+    <div class="clearfix"></div>
     <div class="container woo">
-    <?php woocommerce_content(); ?>
+        <?php woocommerce_content(); ?>
     </div>
 			
-			<div class="g-medium--1 g-medium--last g-wide--2">
-	<p class="editorial-header__excerpt g--half g--centered">
-		<?php edit_post_link( __( 'Edit', 'altertech_s' ), '<p><span class="button--secondary">', '</span></p>' ); ?>
-	</p<!-- .entry-footer -->
-                        </div>
+<footer class="entry-footer pull-right">
+		<?php edit_post_link( _e( 'Edit Post', 'altertech_s' ), '<p><span class="button--secondary"> ', ' <i class="genericon genericon-edit gs-xlarge"></i></span></p>' ); ?>
+	</footer><!-- .entry-footer -->
 </div>

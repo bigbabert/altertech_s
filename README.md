@@ -16,14 +16,12 @@ Altertech_S Wordpress Starter Theme
 <li> Custom logo Uploader in Customizer. </li>
 <li> Various sizes for the thumbnails. </li>
 <li> A graphic grid for Media Galleries. </li>
-<li> A custom field to insert text before the image featured in posts and pages. </li>
-<li> Simple Right Sidebar. </li>
+<li> Right Sidebar. </li>
 <li> Footer Sidebar with default content. </li>
 <li> Lightbox for images with link media and slide for tunnels. </li>
 <li> A simple dropdown for sub-menu. </li>
 <li> Support for WooCommerce. </li>
 <li> Custom Favicon. </li>
-<li> Custom Home Blog Template. </li>
 <li> Support for title tag Wordpress 4.1. </li>
 </ul>
 

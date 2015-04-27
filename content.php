@@ -1,6 +1,9 @@
 <?php
 /**
  * @package Altertech_S
+ * 
+ *  The template used for displaying page content blog homepage.
+ *
  */
 ?>      
 

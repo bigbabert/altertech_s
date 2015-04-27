@@ -1,6 +1,6 @@
 <?php
 /**
- * The header for our theme.
+ * The header for Altertech_S theme.
  *
  * Displays all of the <head> section and everything up till <main>
  *
@@ -27,7 +27,7 @@
 <link rel="profile" href="http://gmpg.org/xfn/11">
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 	<!--[if lt IE 9]>
-	<script src="<?php echo esc_url( get_template_directory_uri() ); ?>/js/html5.js"></script>
+	<script src="<?php echo esc_url( get_template_directory_uri() ); ?>/js/html5.min.js"></script>
 	<![endif]-->
 <script>(function(){document.documentElement.className='js'})();</script>
 <?php wp_head(); ?>
@@ -47,7 +47,7 @@
 <div style="background-color: #4285f4;" class="g-medium--full g-wide--full gs-top">
     <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
         <?php if ( get_theme_mod( 'altertech_s_logo' ) ) : ?>
-	<img src="<?php echo esc_url( get_theme_mod( 'altertech_s_logo' ) ); ?>" alt="<?php echo bloginfo( 'name' ); ?>">
+	<img src="<?php echo esc_url( get_theme_mod( 'altertech_s_logo' ) ); ?>" alt="<?php bloginfo(); ?>">
     <?php else : ?>
     <h1 class="logo"><strong><?php bloginfo( 'name' ); ?> </strong><br><?php bloginfo( 'description' ); ?></h1>
     <?php endif; ?>

@@ -10,10 +10,12 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: altertech_s
 Tags: blue, white, light, two-columns, right-sidebar, responsive-layout, custom-background, custom-colors, custom-header, custom-menu, featured-images, full-width-template, threaded-comments
 
-This theme, like WordPress, is licensed under the GPL.
+This theme, like WordPress, is licensed under the GPLV2, http://www.gnu.org/licenses/gpl-2.0.html
 Use it to make something cool, have fun, and share what you've learned with others.
 
-Altertech_S is based on Google Web Starter Kit https://developers.google.com/web/starter-kit/, Google Inc. 
+Google Web Starter Kit Licensed under the Apache License, Version 2.0 https://github.com/google/web-starter-kit/blob/master/LICENSE
+Fancybox License: www.fancyapps.com/fancybox/#license
+Genericons License: https://github.com/Automattic/Genericons/blob/master/LICENSE.txt
 
 Resetting and rebuilding styles have been helped along thanks to the fine work of
 Google Web Starter Kit https://developers.google.com/web/starter-kit/, Google Inc and Fancybox Jquery, http://fancybox.net, mixed by Bigbabert
@@ -194,6 +196,9 @@ background-color: #4285f4;
 display: block;
 max-width: 100% !important;
 }
+.search a.post-edit-link {
+color: #06e;
+}
 .author .editorial-header .container p, .author span.byline {
 display: none;
 }
@@ -213,7 +218,7 @@ tr.cart_item {
 .woocommerce-cart table.cart img {
 width: 110px;
 }
-#submit, a.checkout-button.button.alt.wc-forward, .woocommerce .cart .button, .woocommerce .cart input.button,.woocommerce #payment #place_order, .woocommerce-page #payment #place_order {
+#submit, a.checkout-button.button.alt.wc-forward, .woocommerce .cart .button, .woocommerce .cart input.button,.woocommerce #payment #place_order, .woocommerce-page #payment #place_order, .woocommerce #respond input#submit, .woocommerce a.button, .woocommerce button.button, .woocommerce input.button, .woocommerce #respond input#submit.alt, .woocommerce a.button.alt, .woocommerce button.button.alt, .woocommerce input.button.alt {
     display: inline-block;
     padding: 12px 32px;
     margin-bottom: 13px;
@@ -229,6 +234,9 @@ width: 110px;
     background: #4285f4;
     color: #fff;
     border: 1px solid #1266f1;
+}
+.single .container.woo {
+margin-top: 50px;
 }
 #submit:hover {
     background: #4d4d4d;
@@ -264,7 +272,7 @@ time.entry-date.published.updated,
 a.url.fn.n {
     text-transform: none;
 }
-.page-template-page-full #secondary {
+.page-template-page-full #secondary, .page-template-page-landing #secondary {
     display: none !important;
 }
 .logo {

@@ -2,10 +2,7 @@
 /**
  * Template Name: Template Landing Page
  *
- * This is the template that displays all pages by default.
- * Please note that this is the WordPress construct of pages
- * and that other 'pages' on your WordPress site will use a
- * different template.
+ * This is the template to create a custom landing page, you should write in html using style guide by Google Web Starter Kit.
  *
  * @package Altertech_S
  */

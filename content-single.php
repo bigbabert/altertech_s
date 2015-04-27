@@ -1,6 +1,12 @@
 <?php
 /**
  * @package Altertech_S
+ * 
+ * Template to display single posts & pages.
+ *
+ * Eventually, some of the functionality here could be replaced by core features.
+ *
+ * @package Altertech_S
  */
 ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
@@ -31,12 +37,12 @@
 <?php
 
 wp_link_pages( array( 'before' => '<nav class="article-nav">', 
-'after' => '', 'previouspagelink' => '<div class="article-nav-link article-nav-link--prev">Previous page</div>', 'nextpagelink' => '', 
+'after' => '', 'previouspagelink' => '<div class="article-nav-link article-nav-link--prev">'. _e('Previous page','altertech_s').'</div>', 'nextpagelink' => '', 
 'next_or_number' => 'next' ) ); 
 
 
 wp_link_pages( array( 'before' => '', 'after' => '</nav>', 'previouspagelink' => '', 
-'nextpagelink' => '<div class="article-nav-link article-nav-link--next">Next page</div>', 'next_or_number' => 'next' ) ); 
+'nextpagelink' => '<div class="article-nav-link article-nav-link--next">'. _e('Previous page','altertech_s').'</div>', 'next_or_number' => 'next' ) ); 
 ?>
         </p>
     </div>

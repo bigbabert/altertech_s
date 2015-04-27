@@ -30,7 +30,7 @@
 					<?php else : ?>
 					<div class="xlarge"><?php the_excerpt(); ?></p> 			
 <?php endif; ?>
-			<div class="xlarge"><p><a href="<?php the_permalink(); ?>" class="button--primary">Full Content</a></p>
+			<div class="xlarge"><p><a href="<?php the_permalink(); ?>" class="button--primary"><?php _e( 'Full Content', 'altertech_s' ) ?></a></p>
 				<p class="medium"> <?php altertech_s_entry_footer(); ?></p> 
 			</div>	
 		</div>
