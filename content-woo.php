@@ -13,10 +13,6 @@
     </div>
     <div class="clearfix"></div>
     <div class="container woo">
-        <?php woocommerce_content(); ?>
+        	<?php  woocommerce_content(); ?>
     </div>
-			
-<footer class="entry-footer pull-right">
-		<?php edit_post_link( _e( 'Edit Post', 'altertech_s' ), '<p><span class="button--secondary"> ', ' <i class="genericon genericon-edit gs-xlarge"></i></span></p>' ); ?>
-	</footer><!-- .entry-footer -->
 </div>

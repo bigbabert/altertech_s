@@ -19,7 +19,14 @@
 <?php endif; ?>
         </div>
     <p class="editorial-header__excerpt "><?php the_content(); ?></p>
-
-    <?php edit_post_link( _e( 'Edit Post', 'altertech_s' ), '<p><span class="button--secondary">', '<i class="genericon genericon-edit gs-xlarge"></i></span></p>' ); ?>
-
+		<?php
+			wp_link_pages( array(
+				'before' => '<div class="container-medium gs-mrg-top gs-mrg-btn">' . __( 'Pages:', 'altertech_s' ),
+				'after'  => '</div>',
+			) );
+		?>
+        <div class="clear"></div>
+	<footer class="entry-footer">
+		<?php altertech_s_entry_footer(); ?>
+	</footer><!-- .entry-footer -->
 </div>

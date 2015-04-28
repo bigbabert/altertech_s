@@ -33,20 +33,12 @@
 		<p class="editorial-header__excerpt "><?php the_content(); ?></p>
 </div><!-- .entry-content -->
 <?php endif; ?>
-    <div  class="container-medium" >
-<?php
-
-wp_link_pages( array( 'before' => '<nav class="article-nav">', 
-'after' => '', 'previouspagelink' => '<div class="article-nav-link article-nav-link--prev">'. _e('Previous page','altertech_s').'</div>', 'nextpagelink' => '', 
-'next_or_number' => 'next' ) ); 
-
-
-wp_link_pages( array( 'before' => '', 'after' => '</nav>', 'previouspagelink' => '', 
-'nextpagelink' => '<div class="article-nav-link article-nav-link--next">'. _e('Previous page','altertech_s').'</div>', 'next_or_number' => 'next' ) ); 
-?>
-        </p>
-    </div>
-        <div class="clear"></div>
+		<?php
+			wp_link_pages( array(
+				'before' => '<div class="container-medium gs-mrg-top gs-mrg-btn">' . __( 'Pages:', 'altertech_s' ),
+				'after'  => '</div>',
+			) );
+		?>
 	<footer class="entry-footer">
 		<?php altertech_s_entry_footer(); ?>
 	</footer><!-- .entry-footer -->

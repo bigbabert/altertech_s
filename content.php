@@ -37,9 +37,9 @@
                   <!-- .entry-content -->
  <?php endif; ?>
 <?php if ( post_password_required() ) : ?>
-<br><a class="button--primary pull-right" href="<?php the_permalink(); ?>"><?php _e( 'Type password to Read', 'altertech_s' ) ?></a>
+<a class="button--primary pull-right" href="<?php the_permalink(); ?>"><?php _e( 'Type password to Read', 'altertech_s' ) ?></a>
 <?php else : ?>
-<br><a class="button--primary pull-right" href="<?php the_permalink(); ?>"><?php _e( 'Read the full post', 'altertech_s' ) ?></a>
+<a class="button--primary pull-right" href="<?php the_permalink(); ?>"><?php _e( 'Read the full post', 'altertech_s' ) ?></a>
 <?php endif; ?>
                         </div>
                     </div>

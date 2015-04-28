@@ -10,7 +10,9 @@ get_header(); ?>
 
 
 
-				<?php get_template_part( 'content', 'woo' ); ?>
+				<?php if ( function_exists('woocommerce_content') ) {
+  get_template_part( 'content', 'woo' ); 
+                                } ?>
 
 <?php  get_sidebar('sidebar-1'); ?>
 <?php get_footer(); ?>

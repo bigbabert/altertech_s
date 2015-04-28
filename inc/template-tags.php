@@ -44,7 +44,7 @@ function altertech_s_paging_nav() {
 		return;
 	}
 	?>
-<div class="container-medium gs-mrg-top">
+<div class="container-medium gs-mrg-top gs-mrg-btn">
     		<p class="large"><?php _e( 'Posts navigation', 'altertech_s' ); ?></p>
 	<nav class="article-nav gs-mrg-top" role="navigation">
 			<div class="article-nav-link article-nav-link--prev"><?php previous_posts_link( _e( '<span class="meta-nav"></span>', 'altertech_s' ) ); ?></div>
@@ -69,7 +69,7 @@ function altertech_s_post_nav() {
 		return;
 	}
 	?>
-<div class="container-medium gs-mrg-top">
+<div class="container-medium gs-mrg-top gs-mrg-btn">
     <p class="large"><?php _e( 'Posts navigation', 'altertech_s' ); ?></p>
 	<nav class="article-nav gs-mrg-top" role="navigation">
 			<?php
@@ -125,23 +125,23 @@ function altertech_s_entry_footer() {
 		/* translators: used between list items, there is a space after the comma */
 		$categories_list = get_the_category_list( __( ', ', 'altertech_s' ) );
 		if ( $categories_list && altertech_s_categorized_blog() ) {
-			printf( '<span class="cat-links gs-large">' . __( '<i class="genericon genericon-category gs-xlarge"></i> <strong>Category:</strong> %1$s', 'altertech_s' ) . '</span>', $categories_list );
+			printf( '<p class="cat-links gs-large">' . __( '<i class="genericon genericon-category gs-xlarge"></i> <strong>Category:</strong> %1$s', 'altertech_s' ) . '</p', $categories_list );
 		}
 
 		/* translators: used between list items, there is a space after the comma */
 		$tags_list = get_the_tag_list( '', __( ', ', 'altertech_s' ) );
 		if ( $tags_list ) {
-			printf( '<br><span class="tags-links gs-large">' . __( '<i class="genericon genericon-tag gs-xlarge"></i> <strong>Tag:</strong>  %1$s', 'altertech_s' ) . '</span></br>', $tags_list );
+			printf( '<br><p class="tags-links gs-large">' . __( '<i class="genericon genericon-tag gs-xlarge"></i> <strong>Tag:</strong>  %1$s', 'altertech_s' ) . '</p>', $tags_list );
 		}
 	}
 
 	if ( ! is_single() && ! post_password_required() && ( comments_open() || get_comments_number() ) ) {
-		echo '<span class="comments-link">';
-		comments_popup_link( _e( 'Leave a comment <i class="genericon genericon-reply gs-xlarge"></i>', 'altertech_s' ), _e( '1 Comment', 'altertech_s' ), _e( '% Comments', 'altertech_s' ) );
-		echo '</span>';
+		echo '<p class="comments-link button--primary gs_white gs_m1xtop">';
+		comments_popup_link( _e( 'Leave a comment <i class="genericon genericon-reply gs-xlarge"></i>', 'altertech_s' ), __( '1 Comment', 'altertech_s' ), __( '% Comments', 'altertech_s' ) );
+		echo '</p>';
 	}
+	edit_post_link( _e( $text = null, 'Edit Post', 'altertech_s' ), '<p class="pull-right"><span class="button--secondary"> ', ' <i class="genericon genericon-edit gs-xlarge"></i></span></p>' );
 
-	edit_post_link( _e( 'Edit Post', 'altertech_s' ), '<p><span class="button--secondary"> ', ' <i class="genericon genericon-edit gs-xlarge"></i></span></p>' );
 }
 endif;
 

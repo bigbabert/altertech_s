@@ -11,7 +11,6 @@
   get_header(); ?>
 	<div id="primary" class="content-area">
 			<header class="page-header">
-
 	<?php if ( function_exists('yoast_breadcrumb') ) {
   yoast_breadcrumb('<p id="breadcrumbs">','</p>');
 } ?>

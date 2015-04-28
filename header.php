@@ -47,7 +47,7 @@
 <div style="background-color: #4285f4;" class="g-medium--full g-wide--full gs-top">
     <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
         <?php if ( get_theme_mod( 'altertech_s_logo' ) ) : ?>
-	<img src="<?php echo esc_url( get_theme_mod( 'altertech_s_logo' ) ); ?>" alt="<?php bloginfo(); ?>">
+        <img class="gs_logo" src="<?php echo esc_url( get_theme_mod( 'altertech_s_logo' ) ); ?>" alt="<?php bloginfo(); ?>">
     <?php else : ?>
     <h1 class="logo"><strong><?php bloginfo( 'name' ); ?> </strong><br><?php bloginfo( 'description' ); ?></h1>
     <?php endif; ?>
