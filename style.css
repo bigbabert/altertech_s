@@ -4,7 +4,7 @@ Theme URI: http://www.blog.altertech.it/altertech_s-wordpress-starter-theme-base
 Author: Bigbabert
 Author URI: http://www.blog.altertech.it/author/alberto-cocchiara/
 Description: New Wordpress multipropose starter theme based on Google Web Starter Kit. Altertech_S is tested up to Wordpress 4.2 and Woocommerce 2.3.8.
-Version: 1.6.4
+Version: 1.6.5
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: altertech_s
@@ -17,6 +17,7 @@ Google Web Starter Kit Licensed under the Apache License, Version 2.0 https://gi
 Fancybox License: www.fancyapps.com/fancybox/#license
 Genericons License: https://github.com/Automattic/Genericons/blob/master/LICENSE.txt
 
+The entry level of the structure of the theme is based on the generator underscores http://underscores.me
 Resetting and rebuilding styles have been helped along thanks to the fine work of
 Google Web Starter Kit https://developers.google.com/web/starter-kit/, Google Inc and Fancybox Jquery, http://fancybox.net, mixed by Bigbabert
 */
@@ -205,12 +206,28 @@ color: #06e;
 .author .editorial-header .container p, .author span.byline {
 display: none;
 }
-ul.products li::before, nav.woocommerce-pagination ul.page-numbers li::before, ul.payment_methods li::before {
-content: "";
+ul.products li::before, nav.woocommerce-pagination ul.page-numbers li::before, ul.payment_methods li::before, .sd-content ul li::before, div.comment-content ul li::before, div.comment-content ol li::before, .sub-menu a::after, .nav-menu li::before, .sub-menu .sub-menu a::after, ul.select2-results li:before, ul.sub-menu li:before, li ul.sub-menu li a::after {
+content: "" !important;
 }
 input#coupon_code.input-text {
 line-height: 1.8;
 margin: 12px 8px 0 0;
+}
+select.orderby {
+height:45px;
+width:100%;
+padding:0 20px 0 20px;
+-webkit-appearance: none;
+-moz-appearance:none;
+appearance:none;
+text-indent:0,01px;
+text-overflow: '';
+border:1px solid #4285f4;
+color:#404040;
+background: url(images/shop_select_bg.svg) center right 10px no-repeat transparent;
+background-size: 35px 35px;
+background-image:none\0;/*Only works in IE9*/
+outline:none;
 }
 tr.cart_item {
     font-family: "Roboto Condensed", Helvetica, sans-serif;
@@ -268,9 +285,6 @@ input#s.search {
 .gs_m1xtop {
    margin-top: 44px !important;
 }
-#respond {
-margin-bottom: 50px;
-}
 a {
     text-decoration: none !important;
 }
@@ -297,10 +311,25 @@ a.url.fn.n {
 .gs-mrg-top {
     margin-top: 35px;
 }
-.gs-mrg-btn {
+.gs-mrg-btn, #secondary h1.widget-title, #respond {
     margin-bottom: 50px;
 }
-.gs_white, .gs_white:active, .gs_white:focus, .gs_white:hover,.gs_white a, .gs_white a:active, .gs_white a:focus, .gs_white a:hover {
+.woocommerce .widget_price_filter .ui-slider .ui-slider-range {
+background-color: #4285f4;
+}
+.woocommerce .widget_price_filter .ui-slider .ui-slider-handle {
+background-color: #1266f1;
+}
+.woocommerce .widget_price_filter .price_slider_wrapper .ui-widget-content {
+background-color: #1266f1;
+}
+div.price_label {
+font-size: 2em;
+font-weight: bold;
+display: inline-block;
+margin: auto;
+}
+.gs_white, .comment-reply-login, .gs_white:active, .comment-reply-login:active, .gs_white:focus, .comment-reply-login:focus, .gs_white:hover, .comment-reply-login:hover, .gs_white a, .gs_white a:active, .gs_white a:focus, .gs_white a:hover {
 color: #fff !important;
 }
 #sidebar-2 {
@@ -489,9 +518,6 @@ ul.nav-menu .focus > ul,
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
-.sub-menu a::after, .nav-menu li::before, .sub-menu .sub-menu a::after {
-    content: "" !important;
-}
 /* Navbar */
 .navbar {
         max-width: 100%;
@@ -537,9 +563,6 @@ ul.children {
 .form-allowed-tags code {
     display: inline-block;
     font-size: 14px;
-}
-.sd-content ul li::before {
-    content: "";
 }
 .single .sd-content ul li a.sd-button::before {
     font: 400 32px/1 Genericons !important;

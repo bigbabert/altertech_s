@@ -5,14 +5,13 @@ and open the template in the editor.
 */
 /* 
     Created on : 6-dic-2014, 23.38.25
-    Author     : albertococchiara
+    Author     : bigbabert
 */
 
 body#tinymce.wp-editor { 
     font-family: Arial, Helvetica, sans-serif; 
     margin: 10px; 
 }
-
 body#tinymce.wp-editor a {
     color: #4CA6CF;
 }

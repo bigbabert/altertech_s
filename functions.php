@@ -143,11 +143,11 @@ add_action( 'after_setup_theme', 'altertech_s_add_editor_styles' );
 function altertech_s_scripts() {
 	wp_enqueue_style( 'altertech_s-style', get_stylesheet_uri() );
         
-        wp_enqueue_style( 'altertech_s-main-style', get_template_directory_uri() . '/genericons/genericons.css' );
+        wp_enqueue_style( 'altertech_s-main-style', get_template_directory_uri() . '/genericons/genericons.min.css' );
 
         wp_enqueue_style( 'altertech_s-genericons-style', get_template_directory_uri() . '/styles/main.min.css' );
         
-	wp_enqueue_script( 'altertech_s-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true );
+	wp_enqueue_script( 'altertech_s-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.min.js', array(), '20130115', true );
 
         wp_enqueue_script( 'altertech_s-main-js', get_template_directory_uri() . '/scripts/main.min.js', array(), '20120206', true );	
         
@@ -183,9 +183,9 @@ require get_template_directory() . '/inc/jetpack.php';
 
 // Enqueue Scripts/Styles for our Lightbox
 function altertech_s_add_lightbox() {
-    wp_enqueue_script( 'altertech_s-fancybox', get_template_directory_uri() . '/scripts/jquery.fancybox.pack.js', array( 'jquery' ), false, true );
-    wp_enqueue_script( 'altertech_s-lightbox', get_template_directory_uri() . '/scripts/lightbox.js', array( 'fancybox' ), false, true );
-    wp_enqueue_style( 'altertech_s-lightbox-style', get_template_directory_uri() . '/styles/jquery.fancybox.css' );
+    wp_enqueue_script( 'altertech_s-fancybox', get_template_directory_uri() . '/scripts/jquery.fancybox.pack.min.js', array( 'jquery' ), false, true );
+    wp_enqueue_script( 'altertech_s-lightbox', get_template_directory_uri() . '/scripts/lightbox.min.js', array( 'fancybox' ), false, true );
+    wp_enqueue_style( 'altertech_s-lightbox-style', get_template_directory_uri() . '/styles/jquery.fancybox.min.css' );
 }
 add_action( 'wp_enqueue_scripts', 'altertech_s_add_lightbox' );
 
