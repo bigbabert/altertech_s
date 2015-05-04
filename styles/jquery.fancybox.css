@@ -77,6 +77,7 @@
 
 #fancybox-loading, .fancybox-close, .fancybox-prev span, .fancybox-next span {
 	background-image: url('../images/lightbox/fancybox_sprite.png');
+        background-position-y: 0px;
 }
 
 #fancybox-loading {

@@ -13,9 +13,11 @@
 	<div class="g--half g--centered">
 	<footer id="colophon" class="site-footer " role="contentinfo">
 		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'http://wordpress.org/', 'altertech_s' ) ); ?>"><?php printf( __( 'Proudly powered by %s', 'altertech_s' ), 'WordPress' ); ?></a>
-			<span class="sep"> | </span>
-			<?php printf( __( 'Theme: %1$s by %2$s.', 'altertech_s' ), 'Altertech_S', '<a class="white" href="http://www.blog.altertech.it/author/alberto-cocchiara/" rel="designer"><i class="icon icon-performance"></i> Bigbabert</a> ' ); ?>
+                    <p><a href="<?php echo esc_url( __( 'http://wordpress.org/', 'altertech_s' ) ); ?>"><?php printf( __( 'Proudly powered by %s', 'altertech_s' ), 'WordPress' ); ?></a> | <?php printf( __( 'Theme: %1$s made with <i style="color:red;" class="genericon genericon-heart"></i> by  %2$s.', 'altertech_s' ), 'Altertech_S', '<a class="white" href="http://www.blog.altertech.it/author/alberto-cocchiara/" rel="designer"> Bigbabert</a> ' ); ?> </p>
+
+                    
+			
+			
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
 </div>

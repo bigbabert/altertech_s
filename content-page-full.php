@@ -13,7 +13,7 @@
 } ?>
     </div>
 	<div class="editorial-header">
-			<?php the_title( '<h2 class="editorial-header__subtitle">', '</h2>' ); ?>    
+			<?php the_title( '<h2 class="editorial-header__subtitle at_center">', '</h2>' ); ?>    
     <?php if ( has_post_thumbnail() ) : ?>
                         <p class="featured-image-borded"><?php the_post_thumbnail( 'altertech_s-full' ); ?></p>
 <?php endif; ?>

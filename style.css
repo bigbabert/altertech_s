@@ -4,7 +4,7 @@ Theme URI: http://www.blog.altertech.it/altertech_s-wordpress-starter-theme-base
 Author: Bigbabert
 Author URI: http://www.blog.altertech.it/author/alberto-cocchiara/
 Description: New Wordpress multipropose starter theme based on Google Web Starter Kit. Altertech_S is tested up to Wordpress 4.2 and Woocommerce 2.3.8.
-Version: 1.6.5
+Version: 1.6.7
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: altertech_s
@@ -17,9 +17,8 @@ Google Web Starter Kit Licensed under the Apache License, Version 2.0 https://gi
 Fancybox License: www.fancyapps.com/fancybox/#license
 Genericons License: https://github.com/Automattic/Genericons/blob/master/LICENSE.txt
 
-The entry level of the structure of the theme is based on the generator underscores http://underscores.me
-Resetting and rebuilding styles have been helped along thanks to the fine work of
-Google Web Starter Kit https://developers.google.com/web/starter-kit/, Google Inc and Fancybox Jquery, http://fancybox.net, mixed by Bigbabert
+The entry level of the structure of the theme is made on the underscores generator  http://underscores.me
+Resetting and rebuilding styles have been helped along thanks to the fine work of Google Web Starter Kit https://developers.google.com/web/starter-kit/, Google Inc and Fancybox Jquery, http://fancybox.net, mixed by Bigbabert
 */
 /*--------------------------------------------------------------
 1.0 Media
@@ -164,7 +163,6 @@ float: left !important;
 float: left;
 padding: 0px;
 margin: 3%;
-border: 2px solid #ccc
 }
 
 /*--------------------------------------------------------------
@@ -199,6 +197,9 @@ display: inline-block !important;
 background-color: #4285f4;
 display: block;
 max-width: 100% !important;
+}
+.at_center {
+text-align: center !important;
 }
 .search a.post-edit-link {
 color: #06e;
@@ -238,7 +239,7 @@ tr.cart_item {
 .woocommerce-cart table.cart img {
 width: 110px;
 }
-#submit, a.checkout-button.button.alt.wc-forward, .woocommerce .cart .button, .woocommerce .cart input.button,.woocommerce #payment #place_order, .woocommerce-page #payment #place_order, .woocommerce #respond input#submit, .woocommerce a.button, .woocommerce button.button, .woocommerce input.button, .woocommerce #respond input#submit.alt, .woocommerce a.button.alt, .woocommerce button.button.alt, .woocommerce input.button.alt {
+#submit, a.checkout-button.button.alt.wc-forward, input.pushbutton-wide, .woocommerce .cart .button, .woocommerce .cart input.button,.woocommerce #payment #place_order, .woocommerce-page #payment #place_order, .woocommerce #respond input#submit, .woocommerce a.button, .woocommerce button.button, .woocommerce input.button, .woocommerce #respond input#submit.alt, .woocommerce a.button.alt, .woocommerce button.button.alt, .woocommerce input.button.alt {
     display: inline-block;
     padding: 12px 32px;
     margin-bottom: 13px;

@@ -20,9 +20,10 @@ function altertech_s_setup() {
 	 * to change 'altertech_s' to the name of your theme in all the template files
 	 */
 	load_theme_textdomain( 'altertech_s', get_template_directory() . '/languages' );
-
 	// Add default posts and comments RSS feed links to head.
 	add_theme_support( 'automatic-feed-links' );
+        // Add support for title tag.
+        add_theme_support( 'title-tag' );
 	// Add support for Woocommerce.
         add_theme_support( 'woocommerce' );
 	/*
@@ -33,7 +34,9 @@ function altertech_s_setup() {
 if ( function_exists( 'add_theme_support' ) ) { 
     add_theme_support( 'post-thumbnails' );
     set_post_thumbnail_size( 280, 210, true ); // Normal post thumbnails
-    add_image_size( 'altertech_s-full', 720, 540 ); // Full size screen
+    add_image_size( 'altertech_s-full', 780, 540 ); // Full size screen
+    add_image_size( 'altertech_s-screen-shot', 720, 540 ); // Full size screen
+    add_image_size( 'altertech_s-large', 720, 540 ); // Full size screen
     }
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
@@ -63,11 +66,6 @@ if ( function_exists( 'add_theme_support' ) ) {
 endif; 
         // altertech_s_setup
         add_action( 'after_setup_theme', 'altertech_s_setup' );
-	// Add support for title tag.
-        function altertech_s_slug_setup() {
-   add_theme_support( 'title-tag' );
-}
-add_action( 'after_setup_theme', 'altertech_s_slug_setup' );
 /**
  * This theme have two sidebars one on the Right and one at the top of the footer.
  * Register widget area.
@@ -180,11 +178,10 @@ require get_template_directory() . '/inc/customizer.php';
  * Load Jetpack compatibility file.
  */
 require get_template_directory() . '/inc/jetpack.php';
-
 // Enqueue Scripts/Styles for our Lightbox
 function altertech_s_add_lightbox() {
     wp_enqueue_script( 'altertech_s-fancybox', get_template_directory_uri() . '/scripts/jquery.fancybox.pack.min.js', array( 'jquery' ), false, true );
-    wp_enqueue_script( 'altertech_s-lightbox', get_template_directory_uri() . '/scripts/lightbox.min.js', array( 'fancybox' ), false, true );
+    wp_enqueue_script( 'altertech_s-lightbox', get_template_directory_uri() . '/scripts/lightbox.min.js', array( 'altertech_s-fancybox' ), false, true );
     wp_enqueue_style( 'altertech_s-lightbox-style', get_template_directory_uri() . '/styles/jquery.fancybox.min.css' );
 }
 add_action( 'wp_enqueue_scripts', 'altertech_s_add_lightbox' );
@@ -194,5 +191,6 @@ function altertech_s_excerpt_length($length) {
 	return 80;
 }
 add_filter('excerpt_length', 'altertech_s_excerpt_length');
+
 
 

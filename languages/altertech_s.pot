@@ -3,7 +3,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: altertech_s 1.0.0\n"
-"Report-Msgid-Bugs-To: http://wordpress.org/support/theme/_s\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/theme/altertech_s\n"
 "POT-Creation-Date: 2014-12-03 09:43:15+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"

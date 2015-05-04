@@ -37,11 +37,14 @@
          <div class="clearfix"></div>
  <div class="gs_fix">
         <header class="app-bar promote-layer">
+            <?php
+if ( has_nav_menu( 'primary' ) ) : ?> 
             <div class="app-bar-container">
                 <button class="menu">
         <img src="<?php echo get_template_directory_uri(); ?>/images/hamburger.svg" alt="<?php _e( 'Menu', 'altertech_s' ); ?>">
                 </button>
             </div>
+            <?php endif; ?>
         </header>
          <div class="clearfix"></div>
 <div style="background-color: #4285f4;" class="g-medium--full g-wide--full gs-top">
@@ -53,12 +56,14 @@
     <?php endif; ?>
     </a>
         </div>
-			<div id="navbar" class="navbar">
+		<?php if ( has_nav_menu( 'primary' ) ) : ?>	
+         <div id="navbar" class="navbar">
 				<nav id="site-navigation" class="navigation main-navigation navdrawer-container promote-layer">
             <h4><?php _e( 'Navigation', 'altertech_s' ); ?></h4>
 <?php wp_nav_menu( array( 'theme_location' => 'primary','menu_class' => 'nav-menu')); ?>
         </nav>
          </div>
+         <?php endif; ?>
     </div>
     <div class="clearfix"></div>
     <?php if (is_page_template('page-full.php') ):?>
