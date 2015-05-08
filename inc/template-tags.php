@@ -140,7 +140,8 @@ function altertech_s_entry_footer() {
 		comments_popup_link( _e( 'Leave a comment <i class="genericon genericon-reply gs-xlarge"></i>', 'altertech_s' ), __( '1 Comment', 'altertech_s' ), __( '% Comments', 'altertech_s' ) );
 		echo '</p>';
 	}
-	edit_post_link( _e( $text = null, 'Edit Post', 'altertech_s' ), '<p class="pull-right"><span class="button--secondary"> ', ' <i class="genericon genericon-edit gs-xlarge"></i></span></p>' );
+        global $text;
+	edit_post_link(  $text,'<span class="button--secondary pull-right"> ', ' <i class="genericon genericon-edit gs-xlarge"></i></span>');
 
 }
 endif;

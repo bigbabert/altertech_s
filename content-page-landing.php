@@ -10,5 +10,5 @@
 <?php endif; ?>
                    <?php the_content(); ?>                       
 <div class="container">
-<?php 	edit_post_link( _e( $text = null, 'Edit Post', 'altertech_s' ), '<p class="pull-right"><span class="button--secondary"> ', ' <i class="genericon genericon-edit gs-xlarge"></i></span></p>' ); ?>
+<?php global $text; edit_post_link(  $text,'<span class="button--secondary pull-right"> ', ' <i class="genericon genericon-edit gs-xlarge"></i></span>'); ?>
 </div>
