@@ -1,24 +1,27 @@
 /*
-Theme Name: Altertech_S
-Theme URI: http://www.blog.altertech.it/altertech_s-wordpress-starter-theme-based-google-web-starter-kit/
+Theme Name: Google_S
+Theme URI: http://www.blog.altertech.it/google_s-wordpress-starter-theme-based-google-web-starter-kit/
 Author: Bigbabert
 Author URI: http://www.blog.altertech.it/author/alberto-cocchiara/
-Description: New Wordpress multipropose starter theme based on Google Web Starter Kit. Altertech_S is tested up to Wordpress 4.2 and Woocommerce 2.3.10.
-Version: 1.6.9
+Description: New Wordpress multipropose starter theme based on Google Web Starter Kit and Underscores & Bootstrap 3.0. Google_S is tested up to Wordpress 4.1 and Woocommerce 2.2.10.
+Version: 1.7.1
+Template:         google_s
+Template Version: 1.7.1
+GitHub Theme URI: https://github.com/bigbabert/google_s
+GitHub Branch:    master
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Text Domain: altertech_s
+Text Domain: google_s
 Tags: blue, white, light, two-columns, right-sidebar, responsive-layout, custom-background, custom-colors, custom-header, custom-menu, featured-images, full-width-template, threaded-comments
 
-This theme, like WordPress, is licensed under the GPLV2, http://www.gnu.org/licenses/gpl-2.0.html
+This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
 
-Google Web Starter Kit Licensed under the Apache License, Version 2.0 https://github.com/google/web-starter-kit/blob/master/LICENSE
-Fancybox License: www.fancyapps.com/fancybox/#license
-Genericons License: https://github.com/Automattic/Genericons/blob/master/LICENSE.txt
+Google_S is based on Underscores http://underscores.me/, (C) 2012-2014 Automattic, Inc. and
+also on Google Web Starter Kit https://developers.google.com/web/starter-kit/, Google Inc. 
 
-The entry level of the structure of the theme is made on the underscores generator  http://underscores.me
-Resetting and rebuilding styles have been helped along thanks to the fine work of Google Web Starter Kit https://developers.google.com/web/starter-kit/, Google Inc and Fancybox Jquery, http://fancybox.net, mixed by Bigbabert
+Resetting and rebuilding styles have been helped along thanks to the fine work of
+Google Web Starter Kit and Bootstrap 3.0 mixed by Bigbabert
 */
 /*--------------------------------------------------------------
 1.0 Media
@@ -163,72 +166,22 @@ float: left !important;
 float: left;
 padding: 0px;
 margin: 3%;
+border: 2px solid #ccc
 }
 
 /*--------------------------------------------------------------
 1.4 Clearings
 --------------------------------------------------------------*/
-        @media screen and (max-width: 736px) {
-            body.admin-bar #wpadminbar {
-            position: absolute;    
-            }
-            body.admin-bar header.app-bar.promote-layer, body.admin-bar .navdrawer-container h4 {
-              margin-top: 46px;
-            }
-            .gs_logo {
-  margin: 10%;
+.sd-content ul.social-footer li {
+display:block;
+margin-top:15px !important;
 }
-}
-   body.admin-bar #wpadminbar {
-direction: ltr;
-color: #ccc;
-font: 400 13px/32px "Open Sans",sans-serif;
-height: auto;
-position: fixed;
-top: 0;
-left: 0;
-width: 100%;
-min-width: 100%;
-z-index: 99999;
-background: #222;
-display: inline-block !important;
-	}
-.gs_fix {
-background-color: #4285f4;
-display: block;
-max-width: 100% !important;
-}
-.at_center {
-text-align: center !important;
-}
-.search a.post-edit-link {
-color: #06e;
-}
-.author .editorial-header .container p, .author span.byline {
-display: none;
-}
-ul.products li::before, nav.woocommerce-pagination ul.page-numbers li::before, ul.payment_methods li::before, .sd-content ul li::before, div.comment-content ul li::before, div.comment-content ol li::before, .sub-menu a::after, .nav-menu li::before, .sub-menu .sub-menu a::after, ul.select2-results li:before, ul.sub-menu li:before, li ul.sub-menu li a::after {
-content: "" !important;
+ul.products li::before, nav.woocommerce-pagination ul.page-numbers li::before, ul.payment_methods li::before {
+content: "";
 }
 input#coupon_code.input-text {
 line-height: 1.8;
 margin: 12px 8px 0 0;
-}
-select.orderby {
-height:45px;
-width:100%;
-padding:0 20px 0 20px;
--webkit-appearance: none;
--moz-appearance:none;
-appearance:none;
-text-indent:0,01px;
-text-overflow: '';
-border:1px solid #4285f4;
-color:#404040;
-background: url(images/shop_select_bg.svg) center right 10px no-repeat transparent;
-background-size: 35px 35px;
-background-image:none\0;/*Only works in IE9*/
-outline:none;
 }
 tr.cart_item {
     font-family: "Roboto Condensed", Helvetica, sans-serif;
@@ -239,7 +192,7 @@ tr.cart_item {
 .woocommerce-cart table.cart img {
 width: 110px;
 }
-#submit, a.checkout-button.button.alt.wc-forward, input.pushbutton-wide, .woocommerce .cart .button, .woocommerce .cart input.button,.woocommerce #payment #place_order, .woocommerce-page #payment #place_order, .woocommerce #respond input#submit, .woocommerce a.button, .woocommerce button.button, .woocommerce input.button, .woocommerce #respond input#submit.alt, .woocommerce a.button.alt, .woocommerce button.button.alt, .woocommerce input.button.alt {
+#submit, a.checkout-button.button.alt.wc-forward, .woocommerce .cart .button, .woocommerce .cart input.button,.woocommerce #payment #place_order, .woocommerce-page #payment #place_order {
     display: inline-block;
     padding: 12px 32px;
     margin-bottom: 13px;
@@ -255,9 +208,6 @@ width: 110px;
     background: #4285f4;
     color: #fff;
     border: 1px solid #1266f1;
-}
-.single .container.woo {
-margin-top: 50px;
 }
 #submit:hover {
     background: #4d4d4d;
@@ -283,9 +233,6 @@ input#s.search {
 .gs_mtop {
     margin-top: 50px;
 }
-.gs_m1xtop {
-   margin-top: 44px !important;
-}
 a {
     text-decoration: none !important;
 }
@@ -299,9 +246,13 @@ a.url.fn.n {
 .page-template-page-full #secondary, .page-template-page-landing #secondary {
     display: none !important;
 }
+.white, a.white:visited, a.white:focus, a.white:active, a.white:hover {
+    color: #fff !important;
+}
 .logo {
     color: white;
-}.gs_left {
+}
+.gs_left {
     padding-left: 15% !important;
     margin-bottom: 15px;
 }
@@ -311,27 +262,6 @@ a.url.fn.n {
 }
 .gs-mrg-top {
     margin-top: 35px;
-}
-.gs-mrg-btn, #secondary h1.widget-title, #respond {
-    margin-bottom: 50px;
-}
-.woocommerce .widget_price_filter .ui-slider .ui-slider-range {
-background-color: #4285f4;
-}
-.woocommerce .widget_price_filter .ui-slider .ui-slider-handle {
-background-color: #1266f1;
-}
-.woocommerce .widget_price_filter .price_slider_wrapper .ui-widget-content {
-background-color: #1266f1;
-}
-div.price_label {
-font-size: 2em;
-font-weight: bold;
-display: inline-block;
-margin: auto;
-}
-.gs_white, .comment-reply-login, .gs_white:active, .comment-reply-login:active, .gs_white:focus, .comment-reply-login:focus, .gs_white:hover, .comment-reply-login:hover, .gs_white a, .gs_white a:active, .gs_white a:focus, .gs_white a:hover {
-color: #fff !important;
 }
 #sidebar-2 {
     margin-top: 50px;
@@ -408,84 +338,11 @@ div.sd-content.gs_widget ul {
 /*--------------------------------------------------------------
 1.6 Navigation
 --------------------------------------------------------------*/
-.main-navigation {
-	clear: both;
-	margin: 0 auto;
-	max-width: 1080px;
-	min-height: 45px;
-	position: relative;
+nav ul li ul {
+    display: none !important;
 }
-
-ul.nav-menu,
-div.nav-menu > ul {
-	margin: 0;
-	padding: 0 40px 0 0;
-        margin-left: 14%;
-	width: 100%;
-}
-
-.nav-menu li {
-	display: inline-block;
-	position: relative;
-}
-
-.nav-menu li a {
-	display: block;
-	line-height: 1.5;
-	padding: 15px;
-}
-
-.nav-menu li:hover > a,
-.nav-menu li a:hover,
-.nav-menu li:focus > a,
-.nav-menu li a:focus {
-	background-color: #4285f4;
-	color: #fff;
-}
-
-.nav-menu .sub-menu,
-.nav-menu .children {
-	background-color: #3367d6;
-	border: 1px solid #ccc;
-	border-top: 0;
-	padding: 0;
-	position: absolute;
-	left: -2px;
-	z-index: 99999;
-	height: 1px;
-	width: 1px;
-	overflow: hidden;
-	clip: rect(1px, 1px, 1px, 1px);
-}
-
-.nav-menu .sub-menu ul,
-.nav-menu .children ul {
-	border-left: 0;
-	left: 100%;
-	top: 0;
-}
-
-ul.nav-menu ul a,
-.nav-menu ul ul a {
-	color: #fff;
-        width: 200px;
-}
-
-ul.nav-menu ul a:hover,
-.nav-menu ul ul a:hover,
-ul.nav-menu ul a:focus,
-.nav-menu ul ul a:focus {
-        background-color: #4285f4;
-}
-
-ul.nav-menu li:hover > ul,
-.nav-menu ul li:hover > ul,
-ul.nav-menu .focus > ul,
-.nav-menu .focus > ul {
-	clip: inherit;
-	overflow: inherit;
-	height: inherit;
-	width: inherit;
+nav ul li:hover ul {
+    display: inline-block !important;
 }
 .menu-item-has-children a::after {
     content: "\e002";
@@ -503,26 +360,8 @@ ul.nav-menu .focus > ul,
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
-.sub-menu .menu-item-has-children a::after {
-    content: "\e003" !important;
-    font-family: "icons";
-    display: inline-block;
-    vertical-align: bottom;
-    font-weight: 400;
-    font-style: normal;
-    line-height: 1em;
-    margin-left: 10px;
-    speak: none;
-    text-decoration: inherit;
-    text-transform: none;
-    text-rendering: optimizeLegibility;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-}
-/* Navbar */
-.navbar {
-        max-width: 100%;
-	width: 100%;
+.sub-menu a::after {
+    content: "";
 }
 /*--------------------------------------------------------------
 1.7 Comments Styling
@@ -565,6 +404,9 @@ ul.children {
     display: inline-block;
     font-size: 14px;
 }
+.sd-content ul li::before {
+    content: "";
+}
 .single .sd-content ul li a.sd-button::before {
     font: 400 32px/1 Genericons !important;
 }
@@ -572,6 +414,12 @@ ul.children {
 1.8 Tablet Media Query
 --------------------------------------------------------------*/
 @media screen and (max-device-width: 966px){
+    #mobile-menu, .navdrawer-container {
+display: block !important;
+}
+.main-navigation {
+display: none !important;
+}
     .app-bar .logo {
     font-size: 28px !important;
     line-height: 30px !important;

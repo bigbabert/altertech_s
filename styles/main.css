@@ -2333,6 +2333,17 @@ object {
     position: relative;
     z-index: 1
 }
+.g-medium--full.g-wide--full.gs-top {
+background-color: #4285f4;
+}
+.g-medium--full.g-wide--full.gs-top.gs-logo-cont {
+background-color: #4285f4;
+margin-top: -100px;
+z-index: 999 !important;
+}
+.gs_logo {
+margin-left: 20%;
+}
 @media only screen and (min-width: 620px) {
     .breadcrumbs {
         display: block

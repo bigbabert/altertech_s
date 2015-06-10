@@ -46,16 +46,19 @@ if ( has_nav_menu( 'primary' ) ) : ?>
             </div>
             <?php endif; ?>
         </header>
-         <div class="clearfix"></div>
-<div style="background-color: #4285f4;" class="g-medium--full g-wide--full gs-top">
-    <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
         <?php if ( get_theme_mod( 'altertech_s_logo' ) ) : ?>
+         <div class="g-medium--full g-wide--full gs-top gs-logo-cont">
+    <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
         <img class="gs_logo" src="<?php echo esc_url( get_theme_mod( 'altertech_s_logo' ) ); ?>" alt="<?php bloginfo(); ?>">
-    <?php else : ?>
-    <h1 class="logo"><strong><?php bloginfo( 'name' ); ?> </strong><br><?php bloginfo( 'description' ); ?></h1>
-    <?php endif; ?>
     </a>
         </div>
+    <?php else : ?>
+                  <div class="g-medium--full g-wide--full gs-top">
+    <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+    <h1 class="logo"><strong><?php bloginfo( 'name' ); ?> </strong><br><?php bloginfo( 'description' ); ?></h1>
+        </a>
+        </div>
+    <?php endif; ?>
 		<?php if ( has_nav_menu( 'primary' ) ) : ?>	
          <div id="navbar" class="navbar">
 				<nav id="site-navigation" class="navigation main-navigation navdrawer-container promote-layer">
