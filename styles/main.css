@@ -3107,6 +3107,8 @@ main {
         position: relative;
         width: 100%;
         overflow-y: inherit;
+        margin-left: 12%;
+        margin-right: auto;
     }
     .navdrawer-container h4 {
         display: none

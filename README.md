@@ -28,7 +28,7 @@ Altertech_S Wordpress Starter Theme
 
 <p>Try our new starter this theme completely responsive and SEO friendly, Altertech_S made based on Google Web Starter Kit (Node.js, Sass, Gulp).</p> <p>We would be extremely grateful for feedback, reports or suggestions.</p>
 
-<p>Altertech_S Theme is tested up to Wordpress 4.2 and Woocommerce 2.3.8.</p>
+<p>Altertech_S Theme is tested up to Wordpress 4.2 and Woocommerce 2.3.10.</p>
 
 <img src="https://raw.githubusercontent.com/bigbabert/altertech_s/master/screenshot.png">
 
@@ -43,6 +43,8 @@ Use it to make something cool, have fun, and share what you've learned with othe
 <p>Google Web Starter Kit Licensed under the Apache License, Version 2.0 https://github.com/google/web-starter-kit/blob/master/LICENSE</p>
 <p>Fancybox License: www.fancyapps.com/fancybox/#license<p>
 <p>Genericons License: https://github.com/Automattic/Genericons/blob/master/LICENSE.txt<p>
+
+<p>Thanks to first beta tester Riccardo to give a lot of suggestions and help to improve this theme</p>p
 
 <p>Resetting and rebuilding styles have been helped along thanks to the fine work of
 Google Web Starter Kit & FancyBox & Automattic</p>
