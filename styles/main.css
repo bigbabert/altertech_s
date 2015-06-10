@@ -2321,7 +2321,8 @@ td:last-child::after {
 img,
 video,
 object {
-    max-width: 100%
+    max-width: 100%;
+    height: auto;
 }
 .content img {
     margin-top: 26px;
