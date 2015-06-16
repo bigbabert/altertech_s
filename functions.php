@@ -191,6 +191,17 @@ function altertech_s_excerpt_length($length) {
 	return 80;
 }
 add_filter('excerpt_length', 'altertech_s_excerpt_length');
+// Replaces the excerpt "more" text by a link
+function altertech_s_excerpt_more($more) {
+       global $post;
+        if ($pos=strpos($post->post_content, '<!--more-->')){
+	return '<br><a class="button--primary pull-right" href="'. get_permalink($post->ID) . '"> Read the full post</a>';
+} 
+ else {
+	return ' <a class="gs_rmmore" href="'. get_permalink($post->ID) . '"> <i class="genericon genericon-next"></i></a>';
+}
+        }
+add_filter('excerpt_more', 'altertech_s_excerpt_more');
 
 
 

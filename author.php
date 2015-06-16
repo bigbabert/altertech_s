@@ -1,5 +1,5 @@
 <?php
-
+ if (get_theme_mod( 'altertech_s_author_checkbox' )) { wp_redirect( home_url() ); exit;} else {
 /* 
  * Custom template author for this theme.
  *
@@ -7,7 +7,6 @@
  *
  * @package Altertech_S
  */
-
   get_header(); ?>
 	<div id="primary" class="content-area">
 			<header class="page-header">
@@ -24,7 +23,7 @@
 <div class="g--half"><p class="xlarge"><?php _e( 'Website', 'altertech_s' ); ?>: </p><br><p><a href="<?php echo $curauth->user_url; ?>"><?php echo $curauth->user_url; ?></a></p></div>
 <div class="g--half g--last gs_brd_left"><p class="xlarge"><?php _e( 'Profile', 'altertech_s' ); ?>: </p><br><p><?php echo $curauth->user_description; ?></p></div>
     <div class="clearfix"></div>
-    <h2><?php _e( 'Posts by', 'altertech_s' ); ?><?php echo $curauth->display_name; ?>:</h2>
+    <h2><?php _e( 'Posts by', 'altertech_s' ); ?> <?php echo $curauth->display_name; ?>:</h2>
 <div class="clearfix"></div>
 			</header><!-- .page-header -->
 			</div>
@@ -54,4 +53,4 @@
 		<?php endif; ?>
 <!-- End Loop -->
 <?php get_sidebar(); ?>
-<?php get_footer(); ?>
+ <?php get_footer();  }?>

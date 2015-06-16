@@ -4,7 +4,7 @@ Theme URI: http://www.blog.altertech.it/altertech_s-wordpress-starter-theme-base
 Author: Bigbabert
 Author URI: http://www.blog.altertech.it/author/alberto-cocchiara/
 Description: New Wordpress multipropose starter theme based on Google Web Starter Kit. Altertech_S is tested up to Wordpress 4.2 and Woocommerce 2.3.10.
-Version: 1.7.1
+Version: 1.7.2
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: altertech_s
@@ -170,6 +170,7 @@ margin: 3%;
 --------------------------------------------------------------*/
 body {
 max-width: 100% !important;
+width: 100%;
 overflow-x: hidden !important
 }
 ul.list-guides-intro.list-centered.list--reset.clear {
@@ -197,6 +198,7 @@ position: fixed;
 top: 0;
 left: 0;
 width: 100%;
+max-width: 100% !important;
 min-width: 100%;
 z-index: 99999;
 background: #222;
@@ -210,11 +212,19 @@ max-width: 100% !important;
 .at_center {
 text-align: center !important;
 }
+#secondary .gs_search {
+margin-top: 20px;
+padding-right: 10px !important;
+padding-left: 22px;
+}
+#secondary .gs_search input#s.search {
+width: 110px;
+}
 .search a.post-edit-link {
 color: #06e;
 }
 .gs_search {
-width: 300px;
+width: 230px;
 }
 .gs_search  i {
 font-size: 40px;
@@ -301,7 +311,11 @@ button#searchsubmit {
     border: none;
 }
 input#s.search {
-    line-height: 35px;
+    line-height: 39px;
+    width: 150px;
+}
+label.screen-reader-text {
+display: none;
 }
 #searchsubmit img {
     width: 70px !important;
@@ -311,7 +325,7 @@ input#s.search {
     background-color: #89c4e2;
     padding-bottom: 100%;
     padding-top: 50px;
-    padding-right: 5%;
+    right: 0px;
 }
 .gs_mtop {
     margin-top: 50px;
@@ -341,11 +355,21 @@ a.url.fn.n {
 .gs-top {
  padding: 35px;
 }
+.gs_rmmore i{
+font-size: 1.5em;
+font-weight: 800;
+}
 .gs-mrg-top {
     margin-top: 35px;
 }
-.gs-mrg-btn, #secondary h1.widget-title, #respond {
+.gs-mrg-btn, #respond {
     margin-bottom: 50px;
+}
+h1.widget-title {
+width: 100% !important;
+font-size: 2em;
+padding-right: 10px;
+padding-left: 22px;
 }
 .woocommerce .widget_price_filter .ui-slider .ui-slider-range {
 background-color: #4285f4;

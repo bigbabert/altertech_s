@@ -42,6 +42,22 @@ function altertech_s_customize_register( $wp_customize ) {
 		'section'  => 'altertech_s_logo_section',
 		'settings' => 'altertech_s_logo',
 	) ) );
+        // Author checkbox 
+   $wp_customize->add_section( 'altertech_s_author_section' , array(
+	    'title'       => __( 'Author Settings', 'altertech_s' ),
+	    'priority'    => 32,
+	    'description' => __( 'If checked hide the authors page.', 'altertech_s' )
+	) );
+$wp_customize->add_setting( 'altertech_s_author_checkbox', array(
+    'default' => 0,
+) );
+ 
+$wp_customize->add_control( 'altertech_s_author_checkbox', array(
+    'label' => 'Hide Author Page',
+    'type' => 'checkbox',
+    'section' => 'altertech_s_author_section',
+) );
+
 }
 add_action( 'customize_register', 'altertech_s_customize_register' );
 
