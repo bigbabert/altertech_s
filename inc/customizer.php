@@ -43,19 +43,20 @@ function altertech_s_customize_register( $wp_customize ) {
 		'settings' => 'altertech_s_logo',
 	) ) );
         // Footer Text 
-   $wp_customize->add_section( 'altertech_s_footer_section' , array(
+   $wp_customize->add_section( 'altertech_s_footers_section' , array(
 	    'title'       => __( 'Footer Settings', 'altertech_s' ),
 	    'priority'    => 34,
 	    'description' => __( 'Write text to display in footer', 'altertech_s' )
 	) );
-$wp_customize->add_setting( 'altertech_s_footer_text', array(
+$wp_customize->add_setting( 'altertech_s_footers_text', array(
+    'sanitize_callback' => 'esc_url_raw',
     'default' => '<p><a href="http://wordpress.org/">Proudly powered by WordPress</a> | Theme: Altertech_S made with <i style="color:red;" class="genericon genericon-heart"></i> by  <a class="white" href="http://www.blog.altertech.it/author/alberto-cocchiara/" rel="nofollow"> AlterTech</a> . </p>',
-) );
+    ) );
  
-$wp_customize->add_control( 'altertech_s_footer_text', array(
+$wp_customize->add_control( 'altertech_s_footers_text', array(
     'label' => 'Footer Text',
     'type' => 'text',
-    'section' => 'altertech_s_footer_section',
+    'section' => 'altertech_s_footers_section',
 ) );
 // Author checkbox 
    $wp_customize->add_section( 'altertech_s_author_section' , array(
@@ -64,6 +65,7 @@ $wp_customize->add_control( 'altertech_s_footer_text', array(
 	    'description' => __( 'If checked hide the authors page.', 'altertech_s' )
 	) );
 $wp_customize->add_setting( 'altertech_s_author_checkbox', array(
+    'sanitize_callback' => 'esc_url_raw',
     'default' => 0,
 ) );
  
@@ -75,7 +77,8 @@ $wp_customize->add_control( 'altertech_s_author_checkbox', array(
 $wp_customize->add_setting(
         'altertech_s_header_custom_color',
         array(
-            'default'     => '#4285f4'
+    'sanitize_callback' => 'esc_url_raw',
+            'default'     => '#4285f4',
         )
     );
  
@@ -93,7 +96,8 @@ $wp_customize->add_setting(
 $wp_customize->add_setting(
         'altertech_s_sidebar_custom_color',
         array(
-            'default'     => '#89c4e2'
+    'sanitize_callback' => 'esc_url_raw',
+            'default'     => '#89c4e2',
         )
     );
  
@@ -111,7 +115,8 @@ $wp_customize->add_setting(
 $wp_customize->add_setting(
         'altertech_s_link_menu_color',
         array(
-            'default'     => '#ffffff'
+    'sanitize_callback' => 'esc_url_raw',
+            'default'     => '#ffffff',
         )
     );
  
@@ -129,7 +134,8 @@ $wp_customize->add_setting(
 $wp_customize->add_setting(
         'altertech_s_link_color',
         array(
-            'default'     => '#3372df'
+    'sanitize_callback' => 'esc_url_raw',
+            'default'     => '#3372df',
         )
     );
  
@@ -147,7 +153,8 @@ $wp_customize->add_setting(
 $wp_customize->add_setting(
         'altertech_s_link_hover_color',
         array(
-            'default'     => '#06e'
+            'sanitize_callback' => 'esc_url_raw',
+            'default'     => '#06e',
         )
     );
  
