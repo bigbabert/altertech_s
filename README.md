@@ -23,6 +23,8 @@ Altertech_S Wordpress Starter Theme
 <li> Support for WooCommerce. </li>
 <li> Custom Template for Landing Page. </li>
 <li> Custom Favicon. </li>
+<li> Custom Header, Sidebar & Links Colors </li>
+<li> Custom Footer Text </li>
 <li> Support for title tag Wordpress 4.1. </li>
 </ul>
 

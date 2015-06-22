@@ -42,10 +42,25 @@ function altertech_s_customize_register( $wp_customize ) {
 		'section'  => 'altertech_s_logo_section',
 		'settings' => 'altertech_s_logo',
 	) ) );
-        // Author checkbox 
+        // Footer Text 
+   $wp_customize->add_section( 'altertech_s_footer_section' , array(
+	    'title'       => __( 'Footer Settings', 'altertech_s' ),
+	    'priority'    => 34,
+	    'description' => __( 'Write text to display in footer', 'altertech_s' )
+	) );
+$wp_customize->add_setting( 'altertech_s_footer_text', array(
+    'default' => '<p><a href="http://wordpress.org/">Proudly powered by WordPress</a> | Theme: Altertech_S made with <i style="color:red;" class="genericon genericon-heart"></i> by  <a class="white" href="http://www.blog.altertech.it/author/alberto-cocchiara/" rel="nofollow"> AlterTech</a> . </p>',
+) );
+ 
+$wp_customize->add_control( 'altertech_s_footer_text', array(
+    'label' => 'Footer Text',
+    'type' => 'text',
+    'section' => 'altertech_s_footer_section',
+) );
+// Author checkbox 
    $wp_customize->add_section( 'altertech_s_author_section' , array(
 	    'title'       => __( 'Author Settings', 'altertech_s' ),
-	    'priority'    => 32,
+	    'priority'    => 36,
 	    'description' => __( 'If checked hide the authors page.', 'altertech_s' )
 	) );
 $wp_customize->add_setting( 'altertech_s_author_checkbox', array(
