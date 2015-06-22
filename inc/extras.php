@@ -57,3 +57,74 @@ function altertech_s_setup_author() {
 	}
 }
 add_action( 'wp', 'altertech_s_setup_author' );
+
+if ( get_theme_mod( 'altertech_s_sidebar_custom_color' ) ) {
+function altertech_s_customizer_sidebar_color_css() {
+    ?>
+    <style type="text/css">
+    #secondary {
+	background-color: <?php echo get_theme_mod( 'altertech_s_sidebar_custom_color' ); ?> !important;
+}
+    </style>
+    <?php
+}
+add_action( 'wp_head', 'altertech_s_customizer_sidebar_color_css' );
+}
+if ( get_theme_mod( 'altertech_s_header_custom_color' ) ) {
+function altertech_s_customizer_header_color_css() {
+    ?>
+    <style type="text/css">
+    .navdrawer-container, .g-medium--full.g-wide--full.gs-top, .app-bar, .navdrawer-container ul li a, .gs_fix, .nav-menu .sub-menu, .nav-menu .children, .button--primary, .article-nav-link::before {
+	background-color: <?php echo get_theme_mod( 'altertech_s_header_custom_color' ); ?> !important;
+}
+.button--primary, .reply {
+    border: 1px solid <?php echo get_theme_mod( 'altertech_s_header_custom_color' ); ?> ;
+}
+    </style>
+    <?php
+}
+add_action( 'wp_head', 'altertech_s_customizer_header_color_css' );
+}
+if ( get_theme_mod( 'altertech_s_link_menu_color' ) ) {
+function altertech_s_customizer_link_menu_css() {
+    ?>
+    <style type="text/css">
+     .button--primary, a.button--primary.pull-right, .navdrawer-container ul li a, .nav-menu li a, .nav-menu li:hover > a,
+.nav-menu li a:hover,
+.nav-menu li:focus > a,
+.nav-menu li a:focus {
+	color: <?php echo get_theme_mod( 'altertech_s_link_menu_color' ); ?> !important;
+}
+    </style>
+    <?php
+}
+add_action( 'wp_head', 'altertech_s_customizer_link_menu_css' );
+}
+
+if ( get_theme_mod( 'altertech_s_link_color' ) ) {
+function altertech_s_customizer_link_css() {
+    ?>
+    <style type="text/css">
+        a { color: <?php echo get_theme_mod( 'altertech_s_link_color' ); ?> ; }
+                a:visited {
+    color: <?php echo get_theme_mod( 'altertech_s_link_color' ); ?> !important;
+}
+    </style>
+    <?php
+}
+add_action( 'wp_head', 'altertech_s_customizer_link_css' );
+}
+if ( get_theme_mod( 'altertech_s_link_hover_color' ) ) {
+function altertech_s_customizer_hover_link_css() {
+    ?>
+    <style type="text/css">
+
+a:hover,.button--primary:hover {
+    color: <?php echo get_theme_mod( 'altertech_s_link_hover_color' ); ?> !important;
+}
+    </style>
+    <?php
+}
+add_action( 'wp_head', 'altertech_s_customizer_hover_link_css' );
+}
+
