@@ -58,6 +58,42 @@ $wp_customize->add_control( 'altertech_s_author_checkbox', array(
     'section' => 'altertech_s_author_section',
 ) );
 $wp_customize->add_setting(
+        'altertech_s_header_custom_color',
+        array(
+            'default'     => '#4285f4'
+        )
+    );
+ 
+    $wp_customize->add_control(
+        new WP_Customize_Color_Control(
+            $wp_customize,
+            'header_custom_color',
+            array(
+                'label'      => __( 'Header Color', 'altertech_s' ),
+                'section'    => 'colors',
+                'settings'   => 'altertech_s_header_custom_color'
+            )
+        )
+    );
+$wp_customize->add_setting(
+        'altertech_s_sidebar_custom_color',
+        array(
+            'default'     => '#89c4e2'
+        )
+    );
+ 
+    $wp_customize->add_control(
+        new WP_Customize_Color_Control(
+            $wp_customize,
+            'sidebar_custom_color',
+            array(
+                'label'      => __( 'Sidebar Color', 'altertech_s' ),
+                'section'    => 'colors',
+                'settings'   => 'altertech_s_sidebar_custom_color'
+            )
+        )
+    );
+$wp_customize->add_setting(
         'altertech_s_link_menu_color',
         array(
             'default'     => '#ffffff'
