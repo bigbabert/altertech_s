@@ -2920,7 +2920,7 @@ body {
     width: 100%;
     height: 100%;
     margin: 0;
-    padding: 0
+    padding: 0;
 }
 body {
     position: relative;
@@ -2932,7 +2932,8 @@ body {
 }
 body.open,
 .app-bar {
-    overflow: hidden
+    overflow: hidden;
+    max-width: 100% !important;
 }
 .app-bar {
     display: block;
@@ -2953,7 +2954,9 @@ body.open,
     -webkit-flex-direction: row;
     -ms-flex-direction: row;
     flex-direction: row;
-    margin: 0 auto
+    margin: 0 auto;
+    max-width: 100%;
+    overflow-x: hidden !important;
 }
 .app-bar.open,
 .app-bar.open~main {
@@ -2995,6 +2998,7 @@ body.open,
     background-color: transparent;
     border: none;
     padding: 0;
+    margin: 0.4%;
     display: inline-block;
     -webkit-transition: background-color .2s ease-out;
     transition: background-color .2s ease-out;
@@ -3089,8 +3093,8 @@ main {
     }
     .app-bar-container {
         display: block;
-        height: 130px;
-        max-width: 864px;
+        height: auto;
+        max-width: 100%;
         padding: 0 16px;
         box-sizing: border-box;
         background-color: #4285f4
