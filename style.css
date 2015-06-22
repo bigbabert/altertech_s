@@ -4,7 +4,7 @@ Theme URI: http://www.blog.altertech.it/altertech_s-wordpress-starter-theme-base
 Author: Bigbabert
 Author URI: http://www.blog.altertech.it/author/alberto-cocchiara/
 Description: New Wordpress multipropose starter theme based on Google Web Starter Kit. Altertech_S is tested up to Wordpress 4.2 and Woocommerce 2.3.11.
-Version: 1.8.0
+Version: 1.8.1
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: altertech_s
@@ -246,15 +246,15 @@ input#coupon_code.input-text {
 line-height: 1.8;
 margin: 12px 8px 0 0;
 }
-select#cat.postform {
+select#cat.postform, select.dropdown_product_cat, #sidebar-2 select {
+font-size:0.9em;
 height:45px;
-width:220px;
+width:210px;
 padding:0 2px 0 2px;
 -webkit-appearance: none;
 -moz-appearance:none;
 appearance:none;
-text-indent:0,01px;
-text-overflow: '';
+text-indent:8px;
 border:1px solid #4285f4;
 color:#404040;
 background: url(images/shop_select_bg.svg) center right 2px no-repeat transparent;

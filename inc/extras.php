@@ -62,7 +62,7 @@ if ( get_theme_mod( 'altertech_s_sidebar_custom_color' ) ) {
 function altertech_s_customizer_sidebar_color_css() {
     ?>
     <style type="text/css">
-    #secondary {
+    #secondary, #gc-footer {
 	background-color: <?php echo get_theme_mod( 'altertech_s_sidebar_custom_color' ); ?> !important;
 }
     </style>
