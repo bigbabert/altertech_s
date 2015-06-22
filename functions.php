@@ -203,5 +203,45 @@ function altertech_s_excerpt_more($more) {
         }
 add_filter('excerpt_more', 'altertech_s_excerpt_more');
 
+if ( get_theme_mod( 'altertech_s_link_menu_color' ) ) {
+function altertech_s_customizer_link_menu_css() {
+    ?>
+    <style type="text/css">
+              .navdrawer-container ul li a, .nav-menu li a, .nav-menu li:hover > a,
+.nav-menu li a:hover,
+.nav-menu li:focus > a,
+.nav-menu li a:focus {
+	color: <?php echo get_theme_mod( 'altertech_s_link_menu_color' ); ?> !important;
+}
+    </style>
+    <?php
+}
+add_action( 'wp_head', 'altertech_s_customizer_link_menu_css' );
+}
 
+if ( get_theme_mod( 'altertech_s_link_color' ) ) {
+function altertech_s_customizer_link_css() {
+    ?>
+    <style type="text/css">
+        a { color: <?php echo get_theme_mod( 'altertech_s_link_color' ); ?> ; }
+                a:visited {
+    color: <?php echo get_theme_mod( 'altertech_s_link_color' ); ?> !important;
+}
+    </style>
+    <?php
+}
+add_action( 'wp_head', 'altertech_s_customizer_link_css' );
+}
+if ( get_theme_mod( 'altertech_s_link_hover_color' ) ) {
+function altertech_s_customizer_hover_link_css() {
+    ?>
+    <style type="text/css">
 
+a:hover {
+    color: <?php echo get_theme_mod( 'altertech_s_link_hover_color' ); ?> !important;
+}
+    </style>
+    <?php
+}
+add_action( 'wp_head', 'altertech_s_customizer_hover_link_css' );
+}

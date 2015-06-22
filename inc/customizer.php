@@ -57,7 +57,60 @@ $wp_customize->add_control( 'altertech_s_author_checkbox', array(
     'type' => 'checkbox',
     'section' => 'altertech_s_author_section',
 ) );
-
+$wp_customize->add_setting(
+        'altertech_s_link_menu_color',
+        array(
+            'default'     => '#ffffff'
+        )
+    );
+ 
+    $wp_customize->add_control(
+        new WP_Customize_Color_Control(
+            $wp_customize,
+            'link_menu_color',
+            array(
+                'label'      => __( 'Link Menu Color', 'altertech_s' ),
+                'section'    => 'colors',
+                'settings'   => 'altertech_s_link_menu_color'
+            )
+        )
+    );
+$wp_customize->add_setting(
+        'altertech_s_link_color',
+        array(
+            'default'     => '#3372df'
+        )
+    );
+ 
+    $wp_customize->add_control(
+        new WP_Customize_Color_Control(
+            $wp_customize,
+            'link_color',
+            array(
+                'label'      => __( 'Link Color', 'altertech_s' ),
+                'section'    => 'colors',
+                'settings'   => 'altertech_s_link_color'
+            )
+        )
+    );
+$wp_customize->add_setting(
+        'altertech_s_link_hover_color',
+        array(
+            'default'     => '#06e'
+        )
+    );
+ 
+    $wp_customize->add_control(
+        new WP_Customize_Color_Control(
+            $wp_customize,
+            'link_hover_color',
+            array(
+                'label'      => __( 'Link Hover Color', 'altertech_s' ),
+                'section'    => 'colors',
+                'settings'   => 'altertech_s_link_hover_color'
+            )
+        )
+    );
 }
 add_action( 'customize_register', 'altertech_s_customize_register' );
 
