@@ -58,7 +58,7 @@ function altertech_s_setup_author() {
 }
 add_action( 'wp', 'altertech_s_setup_author' );
 
-if ( get_theme_mod( 'altertech_s_sidebar_custom_color' ) ) {
+if ( !is_admin() && get_theme_mod( 'altertech_s_sidebar_custom_color' ) ) {
 function altertech_s_customizer_sidebar_color_css() {
     ?>
     <style type="text/css">
@@ -70,7 +70,7 @@ function altertech_s_customizer_sidebar_color_css() {
 }
 add_action( 'wp_head', 'altertech_s_customizer_sidebar_color_css' );
 }
-if ( get_theme_mod( 'altertech_s_header_custom_color' ) ) {
+if ( !is_admin() && get_theme_mod( 'altertech_s_header_custom_color' ) ) {
 function altertech_s_customizer_header_color_css() {
     ?>
     <style type="text/css">
@@ -85,7 +85,7 @@ function altertech_s_customizer_header_color_css() {
 }
 add_action( 'wp_head', 'altertech_s_customizer_header_color_css' );
 }
-if ( get_theme_mod( 'altertech_s_link_menu_color' ) ) {
+if ( !is_admin() && get_theme_mod( 'altertech_s_link_menu_color' ) ) {
 function altertech_s_customizer_link_menu_css() {
     ?>
     <style type="text/css">
@@ -101,7 +101,7 @@ function altertech_s_customizer_link_menu_css() {
 add_action( 'wp_head', 'altertech_s_customizer_link_menu_css' );
 }
 
-if ( get_theme_mod( 'altertech_s_link_color' ) ) {
+if ( !is_admin() && get_theme_mod( 'altertech_s_link_color' ) ) {
 function altertech_s_customizer_link_css() {
     ?>
     <style type="text/css">
@@ -114,7 +114,7 @@ function altertech_s_customizer_link_css() {
 }
 add_action( 'wp_head', 'altertech_s_customizer_link_css' );
 }
-if ( get_theme_mod( 'altertech_s_link_hover_color' ) ) {
+if ( !is_admin() && get_theme_mod( 'altertech_s_link_hover_color' ) ) {
 function altertech_s_customizer_hover_link_css() {
     ?>
     <style type="text/css">
