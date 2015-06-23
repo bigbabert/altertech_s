@@ -62,7 +62,7 @@ if ( !is_admin() && get_theme_mod( 'altertech_s_sidebar_custom_color' ) ) {
 function altertech_s_customizer_sidebar_color_css() {
     ?>
     <style type="text/css">
-    #secondary, #gc-footer {
+    #secondary, #gc-footer, #left-sidebar {
 	background-color: <?php echo get_theme_mod( 'altertech_s_sidebar_custom_color' ); ?> !important;
 }
     </style>
@@ -127,4 +127,3 @@ a:hover,.button--primary:hover {
 }
 add_action( 'wp_head', 'altertech_s_customizer_hover_link_css' );
 }
-

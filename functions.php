@@ -82,6 +82,15 @@ function altertech_s_widgets_init() {
 		'before_title'  => '<h1 class="widget-title">',
 		'after_title'   => '</h1>',
 	) );
+        	register_sidebar( array(
+		'name'          => __( 'Left Sidebar', 'altertech_s' ),
+		'id'            => 'sidebar-3',
+		'description'   => __( 'This is a simple left Sidebar', 'altertech_s' ),
+		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</aside>',
+		'before_title'  => '<h1 class="widget-title">',
+		'after_title'   => '</h1>',
+	) );
 	register_sidebar( array(
 		'name'          => __( 'Footer Sidebar', 'altertech_s' ),
 		'id'            => 'sidebar-2',

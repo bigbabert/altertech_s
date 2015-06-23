@@ -69,12 +69,24 @@ if ( has_nav_menu( 'primary' ) ) : ?>
          <?php endif; ?>
     </div>
     <div class="clearfix"></div>
+<?php if ( is_active_sidebar( 'sidebar-3' ) ) : ?>
+</div>
+<div id="left-sidebar" class="g-wide--1 g-wide--last g-medium--half g--last" role="complementary" >
+    <div class="container">
+	<?php dynamic_sidebar( 'sidebar-3' ); ?>
+    </div>
+</div><!-- #left-sidebar -->
+<?php endif; ?>						
     <?php if (is_page_template('page-full.php') ):?>
         <div class="g-medium--full g-wide--full">
     <?php elseif ( is_page_template('page-style-guide.php') || is_page_template('page-landing.php')): ?>
         <div class="g-medium--full g-wide--full">
-    <?php elseif ( is_active_sidebar( 'sidebar-1' )  ) : ?>
+    <?php elseif ( is_active_sidebar( 'sidebar-1' ) && ! is_active_sidebar('sidebar-3') ) : ?>
         <div  class="g-wide--3 g-medium--half" > 
+    <?php elseif ( is_active_sidebar( 'sidebar-3' ) && ! is_active_sidebar('sidebar-1') ) : ?>
+        <div  class="g-medium--2 g-medium--push-1 g-medium--last g-wide--3 g-wide--push-1 g-wide--last" > 
+    <?php elseif ( is_active_sidebar( 'sidebar-1' ) && is_active_sidebar('sidebar-3') ) : ?>
+            <div id="middle-contents" class="g-medium--1 g-medium--last g-wide--2" > 
     <?php else : ?> 
         <div class="g-medium--full g-wide--full">
     <?php endif; ?>
