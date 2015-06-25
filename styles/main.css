@@ -2949,7 +2949,7 @@ body.open,
     margin: 0 auto;
     max-width: 100%;
     overflow-x: hidden !important;
-    overflow-y: auto;
+    overflow-y: hidden;
 }
 .app-bar.open,
 .app-bar.open~main {
