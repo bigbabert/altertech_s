@@ -51,7 +51,7 @@ if ( has_nav_menu( 'primary' ) ) : ?>
     <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
         <img class="gs_logo" src="<?php echo esc_url( get_theme_mod( 'altertech_s_logo' ) ); ?>" alt="<?php bloginfo(); ?>">
     </a>
-        </div>
+         </div>
     <?php else : ?>
                   <div class="g-medium--full g-wide--full gs-top">
     <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
@@ -71,7 +71,7 @@ if ( has_nav_menu( 'primary' ) ) : ?>
     <div class="clearfix"></div>
 <?php if ( is_active_sidebar( 'sidebar-3' ) ) : ?>
 </div>
-<div id="left-sidebar" class="g-wide--1 g-wide--last g-medium--half g--last" role="complementary" >
+<div id="left-sidebar" class="g--third" role="complementary" >
     <div class="container">
 	<?php dynamic_sidebar( 'sidebar-3' ); ?>
     </div>
@@ -84,9 +84,9 @@ if ( has_nav_menu( 'primary' ) ) : ?>
     <?php elseif ( is_active_sidebar( 'sidebar-1' ) && ! is_active_sidebar('sidebar-3') ) : ?>
         <div  class="g-wide--3 g-medium--half" > 
     <?php elseif ( is_active_sidebar( 'sidebar-3' ) && ! is_active_sidebar('sidebar-1') ) : ?>
-        <div  class="g-medium--2 g-medium--push-1 g-medium--last g-wide--3 g-wide--push-1 g-wide--last" > 
+        <div  class="g--last" > 
     <?php elseif ( is_active_sidebar( 'sidebar-1' ) && is_active_sidebar('sidebar-3') ) : ?>
-            <div id="middle-contents" class="g-medium--1 g-medium--last g-wide--2" > 
+            <div id="middle-contents" class="g--third" > 
     <?php else : ?> 
         <div class="g-medium--full g-wide--full">
     <?php endif; ?>

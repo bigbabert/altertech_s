@@ -7,7 +7,7 @@
 ?>
 <?php if ( is_active_sidebar( 'sidebar-1' ) ) : ?>
 </div>
-<div id="secondary" class="g-wide--1 g-wide--last g-medium--half g--last" role="complementary">
+<div id="secondary" class="<?php if ( is_active_sidebar( 'sidebar-3' ) ) : ?>g--third g--last<?php else : ?>g-wide--1 g-wide--last g-medium--half g--last<?php endif; ?>" role="complementary">
     <div class="container">
 	<?php dynamic_sidebar( 'sidebar-1' ); ?>
     </div>

@@ -1012,7 +1012,7 @@ code .highlight .il {
 @media only screen and (min-width: 620px) {
     .editorial-header__subtitle {
         padding-top: 0;
-        padding-bottom: 26px
+        padding-bottom: 6px
     }
 }
 .editorial-header__toc {
@@ -2336,14 +2336,6 @@ object {
 .g-medium--full.g-wide--full.gs-top {
 background-color: #4285f4;
 }
-.g-medium--full.g-wide--full.gs-top.gs-logo-cont {
-background-color: #4285f4;
-margin-top: -100px;
-z-index: 999 !important;
-}
-.gs_logo {
-margin-left: 20%;
-}
 @media only screen and (min-width: 620px) {
     .breadcrumbs {
         display: block
@@ -2957,6 +2949,7 @@ body.open,
     margin: 0 auto;
     max-width: 100%;
     overflow-x: hidden !important;
+    overflow-y: auto;
 }
 .app-bar.open,
 .app-bar.open~main {
@@ -3049,7 +3042,10 @@ ol {
 .navdrawer-container.opened,
 main {
     -webkit-transition: -webkit-transform .3s ease-out;
-    transition: transform .3s ease-out
+    transition: transform .3s ease-out;
+}
+.navdrawer-container.opened {
+z-index: 999;
 }
 .navdrawer-container h4 {
     background-color: #fff;
@@ -3113,7 +3109,6 @@ main {
         content: ' ';
         display: block;
         height: 0;
-        overflow: hidden;
         clear: both
     }
     button.menu {
@@ -3136,9 +3131,6 @@ main {
         max-width: 864px;
         padding-top: 0;
         min-height: initial
-    }
-    body {
-        overflow-y: scroll
     }
 }
 @font-face{font-family:'Roboto Condensed';font-style:normal;font-weight:300;src:url(../fonts/RobotoCondensed-Light.eot);src:local("Roboto Condensed Light"),local("RobotoCondensed-Light"),url(../fonts/RobotoCondensed-Light.eot) format("embedded-opentype"),url(../fonts/RobotoCondensed-Light.woff) format("woff")}@font-face{font-family:'Roboto Condensed';font-style:normal;font-weight:400;src:url(../fonts/RobotoCondensed-Regular.eot);src:local("Roboto Condensed Regular"),local("RobotoCondensed-Regular"),url(../fonts/RobotoCondensed-Regular.eot) format("embedded-opentype"),url(../fonts/RobotoCondensed-Regular.woff) format("woff")}@font-face{font-family:'Roboto Condensed';font-style:normal;font-weight:700;src:url(../fonts/RobotoCondensed-Bold.eot);src:local("Roboto Condensed Regular"),local("RobotoCondensed-Bold"),url(../fonts/RobotoCondensed-Bold.eot) format("embedded-opentype"),url(../fonts/RobotoCondensed-Bold.woff) format("woff")}@font-face{font-family:'Roboto Condensed';font-style:italic;font-weight:300;src:url(../fonts/RobotoCondensed-LightItalic.eot);src:local("Roboto Condensed Light Italic"),local("RobotoCondensed-LightItalic"),url(../fonts/RobotoCondensed-LightItalic.eot) format("embedded-opentype"),url(../fonts/RobotoCondensed-LightItalic.woff) format("woff")}@font-face{font-family:'Roboto Condensed';font-style:italic;font-weight:400;src:url(../fonts/RobotoCondensed-Italic.eot);src:local("Roboto Condensed Italic"),local("RobotoCondensed-Italic"),url(../fonts/RobotoCondensed-Italic.eot) format("embedded-opentype"),url(../fonts/RobotoCondensed-Italic.woff) format("woff")}@font-face{font-family:'Roboto Condensed';font-style:italic;font-weight:700;src:url(../fonts/RobotoCondensed-BoldItalic.eot);src:local("Roboto Condensed Bold Italic"),local("RobotoCondensed-BoldItalic"),url(../fonts/RobotoCondensed-BoldItalic.eot) format("embedded-opentype"),url(../fonts/RobotoCondensed-BoldItalic.woff) format("woff")}

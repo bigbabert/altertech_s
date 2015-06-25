@@ -4,7 +4,7 @@ Theme URI: http://www.blog.altertech.it/altertech_s-wordpress-starter-theme-base
 Author: Bigbabert
 Author URI: http://www.blog.altertech.it/author/alberto-cocchiara/
 Description: New Wordpress multipropose starter theme based on Google Web Starter Kit. Altertech_S is tested up to Wordpress 4.2 and Woocommerce 2.3.11.
-Version: 1.8.5
+Version: 1.8.6
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: altertech_s
@@ -172,6 +172,7 @@ body, html {
 max-width: 100% !important;
 width: 100%;
 overflow-x: hidden !important
+    overflow-y: scroll;
 }
 .logged-in.admin-bar .app-bar-container {
 margin-top: 1.8%;
@@ -180,8 +181,16 @@ ul.list-guides-intro.list-centered.list--reset.clear {
 margin-right: 5%;    
 }
 img.gs_logo {
-margin-top: 5%;
+margin-left: 3%;
+padding-bottom:1%;
+width: auto;
 height: auto;
+max-height: 180px;
+max-width: 280px;
+position: relative;
+top: 12px;
+left: 10%;
+z-index: 997;
 }
 .widget_price_filter h1.widget-title {
 margin-bottom: 20px;
@@ -193,11 +202,6 @@ margin-bottom: 20px;
             body.admin-bar header.app-bar.promote-layer, body.admin-bar .navdrawer-container h4 {
               margin-top: 46px;
             }
-            .gs_logo {
-  margin-top: 100px;
-  margin-left: -5% !important;
-  top: 10px;
-}
 }
    body.admin-bar #wpadminbar {
 direction: ltr;
@@ -222,7 +226,7 @@ max-width: 100% !important;
 .at_center {
 text-align: center !important;
 }
-#secondary .gs_search {
+#secondary .gs_search, #left-sidebar .gs_search {
 margin-top: 20px;
 padding-right: 10px !important;
 padding-left: 22px;
@@ -338,22 +342,22 @@ display: none;
 }
 #secondary {
     background-color: #89c4e2;
-    padding-bottom: 100%;
+    padding-bottom: 20%;
     padding-top: 50px;
-    right: 0px;
-    float: right;
+    height: auto;
 }
 #left-sidebar {
     background-color: #89c4e2;
-    padding-bottom: 100%;
+    padding-bottom: 20%;
     padding-top: 50px;
-    left: 0px;
-    float: left;
-    position: absolute;
+    height: auto;
 }
-#middle-contents {
-position: relative;
-left: 25.9%;
+#middle-contents .editorial-header__subtitle a{
+margin-left: 12px !important;
+display: block;
+}
+#middle-contents .editorial-header .container::before {
+margin: 168px -25px 0 0;
 }
 .gs_mtop {
     margin-top: 50px;
@@ -539,7 +543,6 @@ div.nav-menu > ul {
 	z-index: 99999;
 	height: 1px;
 	width: 1px;
-	overflow: hidden;
 	clip: rect(1px, 1px, 1px, 1px);
 }
 
