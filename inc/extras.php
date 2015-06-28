@@ -127,3 +127,49 @@ a:hover,.button--primary:hover {
 }
 add_action( 'wp_head', 'altertech_s_customizer_hover_link_css' );
 }
+// Select Sidebar options on Page and Posts	
+add_action( 'add_meta_boxes', 'alter_sidebar_chooser' );
+add_action( 'save_post', 'alter_sidebar_updater');	
+	 function alter_sidebar_chooser() {
+            add_meta_box( 
+        'sidebar-meta',
+        __( 'Alter Custom Sidebar', 'altertech_s' ),
+        'custom_sidebar_callback',
+        'post',
+        'side'
+    );
+    add_meta_box( 
+        'sidebar-meta',
+        __( 'Alter Custom Sidebar', 'altertech_s' ),
+        'custom_sidebar_callback',
+        'page',
+        'side'
+    );
+	}
+//Select Sidebar Options	
+	 function custom_sidebar_callback($post) {
+		if ( defined('DOING_AUTOSAVE') && DOING_AUTOSAVE ) return $post_id;
+		$custom = get_post_custom($post->ID);
+    if(isset($custom['sidebar']))
+        $val = $custom['sidebar'][0];
+    else
+        $val = "Default";
+?>
+<p><label><?php echo  __("Choose a sidebar to display", 'altertech_s' ); ?></label></p>
+    	<select name="sidebar">
+    		<option value="Default" selected="selected"><?php echo  __("Default", 'altertech_s' ); ?></option>
+    		<option value="sidebar-1"<?php if($val == 'sidebar-1'): echo ' selected="selected"'; endif;?>><?php echo  __("Right Sidebar", 'altertech_s' ); ?></option>
+    		<option value="sidebar-3"<?php if($val == 'sidebar-3'): echo ' selected="selected"'; endif;?>><?php echo  __("Left Sidebar", 'altertech_s' ); ?></option>
+    	</select>
+    <?php
+	}
+//Save Options	
+	 function alter_sidebar_updater(){
+		global $post;
+
+		if ( defined('DOING_AUTOSAVE') && DOING_AUTOSAVE ){
+			return $post_id;
+		}else{
+			update_post_meta($post->ID, 'sidebar', $_POST["sidebar"]);
+		}
+	}
