@@ -7,6 +7,7 @@
  * @package Altertech_S
  */
 ?>
+</div>
 <?php get_sidebar('sidebar-2'); ?>
 <div class="clearfix"></div>
 <div id="gc-footer" class="g-medium--full g-wide--full">

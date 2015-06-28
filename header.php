@@ -83,8 +83,10 @@ if ( has_nav_menu( 'primary' ) ) : ?>
         <div class="g-medium--full g-wide--full">
     <?php elseif ( is_active_sidebar( 'sidebar-1' ) && ! is_active_sidebar('sidebar-3') ) : ?>
         <div  class="g-wide--3 g-medium--half" > 
-    <?php elseif ( is_active_sidebar( 'sidebar-3' ) && ! is_active_sidebar('sidebar-1') ) : ?>
+    <?php elseif ( is_active_sidebar( 'sidebar-3' ) && ! is_active_sidebar('sidebar-1') && is_home() ) : ?>
         <div  class="g--last" > 
+    <?php elseif ( is_active_sidebar( 'sidebar-3' ) && ! is_active_sidebar('sidebar-1')&& ! is_home()) : ?>
+        <div  class="g--half g--last" > 
     <?php elseif ( is_active_sidebar( 'sidebar-1' ) && is_active_sidebar('sidebar-3') ) : ?>
             <div id="middle-contents" class="g--third" > 
     <?php else : ?> 

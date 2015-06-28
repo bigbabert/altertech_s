@@ -6,12 +6,9 @@
  */
 ?>
 <div id="post-<?php the_ID(); ?>" class="container" >
-        <div class="container">
 	<?php if ( function_exists('yoast_breadcrumb') ) {
-  yoast_breadcrumb('<p id="breadcrumbs">','</p>');
+  yoast_breadcrumb('<div class="container"><p id="breadcrumbs">','</p></div><div class="clearfix"></div>');
 } ?>
-    </div>
-    <div class="clearfix"></div>
 	<div class="editorial-header gs_mtop">
 			<?php the_title( '<h2 class="editorial-header__subtitle">', '</h2>' ); ?>
     <?php if ( has_post_thumbnail() ) : ?>
@@ -29,4 +26,4 @@
 	<footer class="entry-footer">
 		<?php altertech_s_entry_footer(); ?>
 	</footer><!-- .entry-footer -->
-</div>
+

@@ -15,6 +15,7 @@
 <?php endif; ?>
 
 <?php if ( is_active_sidebar( 'sidebar-2' ) ) : ?>
+</div>
 <div class="clearfix"></div>
 <!-- #content -->
 <section class="styleguide__centered-list feature-spotlight g-medium--full g-wide--full" id="sidebar-2">

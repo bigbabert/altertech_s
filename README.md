@@ -17,14 +17,16 @@ Altertech_S Wordpress Starter Theme
 <li> Various sizes for the thumbnails. </li>
 <li> A graphic grid for Media Galleries. </li>
 <li> Right Sidebar. </li>
-<li> Footer Sidebar with default content. </li>
+<li> Left Sidebar. </li>
+<li> Footer Sidebar. </li>
 <li> Lightbox for images with link media and slide for tunnels. </li>
 <li> A simple dropdown for sub-menu. </li>
 <li> Support for WooCommerce. </li>
 <li> Custom Template for Landing Page. </li>
 <li> Custom Favicon. </li>
-<li> Custom Header, Sidebar & Links Colors </li>
-<li> Custom Footer Text </li>
+<li> Custom Header, Sidebar & Links Colors. </li>
+<li> Custom Sidebar for Post & Page. </li>
+<li> Custom Footer Text. </li>
 <li> Support for title tag Wordpress 4.1. </li>
 </ul>
 
