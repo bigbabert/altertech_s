@@ -12,7 +12,7 @@
 <div class="clearfix"></div>
 <div id="gc-footer" class="g-medium--full g-wide--full">
 	<div class="g--half g--centered">
-	<footer id="colophon" class="site-footer " role="contentinfo">
+	<footer id="colophon" class="site-footer <?php $altertech_s_theme = wp_get_theme(); echo 'altertech_s-'.$altertech_s_theme->get( 'Version' ); ?>" role="contentinfo">
 		<div class="site-info">
                  <?php if ( ! get_theme_mod( 'altertech_s_footers_text' ) ) : ?>   <p><a href="<?php echo esc_url( __( 'http://wordpress.org/', 'altertech_s' ) ); ?>"><?php printf( __( 'Proudly powered by %s', 'altertech_s' ), 'WordPress' ); ?></a> | <?php printf( __( 'Theme: %1$s made with <i style="color:red;" class="genericon genericon-heart"></i> by  %2$s.', 'altertech_s' ), 'Altertech_S', '<a class="white" href="http://www.blog.altertech.it/author/alberto-cocchiara/" rel="nofollow"> AlterTech</a> ' ); ?> </p>
                  <?php else : ?>
